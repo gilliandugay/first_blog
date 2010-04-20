@@ -1,0 +1,16 @@
+<div id="blog">
+<h3 id="title">
+  <%= @article.title %>
+</h3>
+<h4 id="author">
+  <%= @article.date_posted_f %> by
+  <%= @article.author.full_name %>
+</h4>
+<div id="body">
+  <% @article.body.split("\n").each do |paragraph| %> 
+    <p>
+      <%= @article.body %>
+    </p>
+  <% end %>
+</div>
+</div>

@@ -1,0 +1,24 @@
+<p class="show_field">
+  <em>Last Name:</em>
+  <%= @author.last_name %>
+</p>
+
+<p class="show_field">
+  <em>First Name:</em>
+  <%= @author.first_name %>
+</p>
+
+<p class="show_field">
+  <em>Remarks:</em>
+  <%= @author.remarks %>
+</p>
+
+<p class="show_field">
+  <em>Birthday:</em>
+  <%= @author.birthday.strftime("%d %B %Y") %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Delete', @author, :confirm => "Are you sure you want to delete this author?", :method => :delete %> |
+<%= link_to 'Back', authors_path %>
+

@@ -1,0 +1,15 @@
+--- 
+dependencies: []
+
+plugins: []
+
+source_info: 
+  scm_tag: ""
+  scm_url: ""
+release_info: 
+  repository: ecc-releases
+  server: http://pip.manila.exist.com
+  group_id: gillian_dugay
+  type: tar.gz
+  version: 0.0.5
+  artifact_id: myblog

@@ -1,0 +1,17 @@
+<% form_for(:comment, :url => article_comments_path(article)) do |f| %>
+  <h3>Join in the discussion!</h3>
+  <p>
+    <%= f.error_messages %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit "Post Comment" %>
+  </p>
+<% end %>

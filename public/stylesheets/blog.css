@@ -1,0 +1,145 @@
+.blog-title
+{
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 0;
+}
+.blog-author
+{
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  padding-top: 0;
+}
+.blog-body
+{
+  text-align: justify;
+  font-family: Georgia, serif;
+}
+.blog-comments
+{
+}
+
+h2
+{
+  font-size: 36px;
+  font-weight: bold;
+}
+.show_field
+{
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.show_field em
+{
+  font-size: 0.75em;
+  font-style: normal;
+  font-weight: normal;
+  display: block;
+}
+table
+{
+  width: 100%;
+  margin: 10px;
+}
+th { text-align: left; }
+th, td
+{
+  padding: 5px;
+  border: 0;
+}
+.author_panel
+{
+  background-color: #3c3c3c;
+}
+.author_panel th
+{
+  width: 25%;
+  vertical-align: top;
+}
+form
+{
+  padding: 10px;
+}
+.author_panel ol li { list-style: decimal inside; }
+.author_panel .controls
+{
+  text-align: right;
+}
+.controls a
+{
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px;
+  background-color: #444;
+}
+.author_panel .controls a:visited { background-color: #3c3c3c; }
+.author_panel .controls a:hover { background-color: #494949; }
+.author_panel .controls a:active { background-color: #555; }
+form input[type='text'],
+form textarea
+{
+/*  font-size: 1.5em;*/
+  padding: 5px;
+}
+form input[type='text'] { width: 400px; }
+form textarea
+{
+  width: 90%;
+/*  height: 200px;*/
+}
+form input[type='submit'] { width: auto; }
+form label
+{
+/*  font-size: 1.25em;*/
+  font-style: normal;
+  font-weight: normal;
+}
+.comment h4, .comment h5
+{
+  padding: 0;
+  margin: 0;
+}
+.comment h4 { font-size: 16px; }
+.comment h5 { font-size: 12px; }
+.comment { padding: 10px; }
+.blog-comments, .blog-comments form
+{
+  border-top: 1px solid #333;
+}
+.blog-comments form h3
+{
+  font-weight: bold;
+  font-size: 18px;
+}
+.blog-comments form label,
+.blog-comments form input[type='submit']
+{
+  margin: 6px 0;
+}
+.blog-comments form label
+{
+  font-weight: bold;
+  display: block;
+}
+.blog-body
+{
+  margin-bottom: 12px;
+  font-family: Georgia, Times, serif;
+}
+
+body
+{
+  font-family: Helvetica, Arial, sans-serif;
+}
+#menu ul
+{
+  display: block;
+}
+#menu li
+{
+  width: 20%;
+}

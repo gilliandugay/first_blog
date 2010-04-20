@@ -1,0 +1,10 @@
+<ul id="article-list">
+  <% Article.recent_posts.each do |article| %>
+    <% unless article.eql? Article.latest %>
+      <li>
+        <%= truncate(article.title, :length => 50) %>
+        <%= @articles %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

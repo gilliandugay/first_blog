@@ -1,0 +1,29 @@
+<h2>Listing articles</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Status</th>
+    <th>Date posted</th>
+    <th>Author</th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%=h article.title %></td>
+    <td><%=h article.body %></td>
+    <td><%=h article.status %></td>
+    <td><%=h article.date_posted_f %></td>
+    <td><%=h article.author_name %></td>
+    <td class="controls">
+      <%= link_to 'Show', article %>
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create new article', new_article_path %>

@@ -1,0 +1,16 @@
+body {
+  width: 8.5in;
+  height: 11in;
+  font: 12pt serif;
+}
+body > div {
+  padding: 0.5in;
+}
+#header {
+  font-size: 2em;
+}
+form { display: none; }
+#footer {
+  text-transform: uppercase;
+  font-size: 0.75em;
+}

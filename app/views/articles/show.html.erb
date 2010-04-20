@@ -1,0 +1,29 @@
+<p class="show_field">
+  <em>Title:</em>
+  <%=h @article.title %>
+</p>
+
+<p class="show_field">
+  <em>Body:</em>
+  <%=h @article.body %>
+</p>
+
+<p class="show_field">
+  <em>Status:</em>
+  <%=h @article.status %>
+</p>
+
+<p class="show_field">
+  <em>Date posted:</em>
+  <%=h @article.date_posted_f %>
+</p>
+
+<p class="show_field">
+  <em>Author:</em>
+  <%=h "#{@article.author_name} (ID: #{@article.author_id})" %>
+</p>
+
+<%= link_to 'Print', print_article_path(@article) %> |
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Delete', @article, :confirm => "Are you sure you want to delete this article?" %> |
+<%= link_to 'Back', articles_path %>
