@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
   def latest
     @article = Article.latest
-    @comment = Comment.new(:article_id => @article.id)
+    unless @article.nil?
+      @comment = Comment.new(:article_id => @article.id)
+    else
+      redirect_to articles_path
+    end
   end
 
   def index
