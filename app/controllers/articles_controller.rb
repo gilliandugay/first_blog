@@ -28,6 +28,15 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def create
+    @article = Article.new(params[:article])
+    if @article.save
+      redirect_to @article
+    else
+      render :action => 'new'
+    end
+  end
+
   def edit
     @article = Article.find(params[:id])
   end

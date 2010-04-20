@@ -1,2 +1,5 @@
-./log/*.log
+releases/*
+log/*.log
+tmp/**/*
+**/*~
 *~

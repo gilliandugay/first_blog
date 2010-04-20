@@ -51,24 +51,19 @@ table {
 
 body {
 	background: #151d30;
-	font-size: 12px;
-	font-family: arial, sans-serif;
-	
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
 }
-
 a {
 	color: #fefefe;
 	text-decoration: none;
 }
-
-a: hover {
+a:hover {
 	color: #fefefe;
 	text-decoration: none;
 }
-
 #top {
 	height: 220px;
-	display: none;
 }
 
 #wrapper {
