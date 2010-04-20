@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 
   def show
     @article = Article.find(params[:article_id])
-    @comment = @article.comments.build
+    @comment = Comment.find(params[:id]) 
     render :template => "articles/latest"
   end
 
@@ -29,4 +29,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Article.find(params[:article_id])
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    redirect_to article_path(@article)
+  end
 end

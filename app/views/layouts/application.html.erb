@@ -7,8 +7,20 @@
   "HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 
-  <title>Design Portfolio
-  Template</title><%= stylesheet_link_tag "style" %><%= stylesheet_link_tag "blog" %>
+  <title>Blog ni Dugs Dugs</title>
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag 'layout' %>
+  <%= stylesheet_link_tag 'container' %>
+
+  <script type="text/javascript" src="/javascripts/tiny_mce/tiny_mce.js"></script>
+  <script type="text/javascript">
+  <!--
+    tinyMCE.init({
+      mode: "textareas",
+      theme: "simple"
+    });
+  -->
+  </script>
 </head>
 
 <body>
@@ -20,7 +32,11 @@
   <div id="wrapper">
     <div class="content">
       <div id="header">
-        <h1><a href="#"><span>Blog ni</span>Dugs Dugs</a></h1>
+        <h1>
+          <%= "<a href=\"#{url_for '/'}\">" %>
+          <span>sparrows &</span>sunsets
+          <%= "</a>" %>
+        </h1>
 
         <div id="menu">
           <ul>
@@ -34,6 +50,14 @@
       </div><!--header-->
 
       <div class="sidebar">
+        <div id="login_panel">
+          <% if logged_in? %>
+            <%= current_author.full_name %>
+            <%= link_to "Logout", logout_path %>
+          <% else %>
+            <%= link_to "Login", login_path %>
+          <% end %>
+        </div>
         <h3>Recent Posts</h3>
         <%= render :partial => "articles/sidebar" %>
       </div><!--sidebar-->
@@ -46,10 +70,12 @@
 
   <div id="footer">
     <div class="content">
-      <span class="leftp">copyright 2010 Gillian Dugay</span>
-      <span class="rightp">
-        <a href="http://vectorart.org">Thanks to VectorArt</a>
-      </span>
+      <p id="copyright">
+        copyright 2010 Gillian Dugay
+      </p>
+      <a id="credits" href="http://vectorart.org">
+        Thanks to VectorArt
+      </a>
     </div><!--content-->
   </div><!--footer-->
 </body>

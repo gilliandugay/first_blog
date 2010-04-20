@@ -1,24 +1,21 @@
-<h2>Listing articles</h2>
-<table>
+<h1>Articles</h1>
+<table id="article-index">
   <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Status</th>
-    <th>Date posted</th>
-    <th>Author</th>
+    <th class="title">Title</th>
+    <th class="date">Date posted</th>
+    <th class="author">Author</th>
+    <th></th>
   </tr>
 
 <% @articles.each do |article| %>
-  <tr>
-    <td><%=h article.title %></td>
-    <td><%=h article.body %></td>
-    <td><%=h article.status %></td>
-    <td><%=h article.date_posted_f %></td>
-    <td><%=h article.author_name %></td>
+  <tr class="<%= article.status.downcase %>">
+    <td><%= article.title %></td>
+    <td><%= article.abbreviated_date_posted %></td>
+    <td><%= article.author.initial_and_last_name %></td>
     <td class="controls">
-      <%= link_to 'Show', article %>
-      <%= link_to 'Edit', edit_article_path(article) %>
-      <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Show', article, :class => 'control' %>
+      <%= link_to 'Edit', edit_article_path(article), :class => 'control' %>
+      <%= link_to 'Delete', article, :confirm => 'Are you sure you want to delete this author?', :method => :delete, :class => 'control' %>
     </td>
   </tr>
 <% end %>
@@ -26,4 +23,4 @@
 
 <br />
 
-<%= link_to 'Create new article', new_article_path %>
+<%= link_to 'Create new article', new_article_path, :class => 'new_link' %>

@@ -2,10 +2,15 @@ class Article < ActiveRecord::Base
   belongs_to :author
   has_many :comments
 
-  validates_presence_of :title, :message => "Title required."
-  validates_presence_of :body, :message => "Body text required."
+  validates_presence_of :title, :message => "required"
+  validates_presence_of :body, :message => "required"
+  validates_presence_of :author, :message => "required"
 
-  def date_posted_f
+  def abbreviated_date_posted
+    (status.eql?("Posted") ? date_posted.strftime("%b %d %Y") : "")
+  end
+
+  def full_date_posted
     (status.eql?("Posted") ? date_posted.strftime("%d %B %Y") : "")
   end
 
@@ -17,10 +22,14 @@ class Article < ActiveRecord::Base
     %w(Draft Posted)
   end
 
+  def posted?
+    status.eql? "Posted"
+  end
+
   validates_inclusion_of :status, :in => Article.statuses
 
   def before_save
-    date_posted = DateTime.now if status.eql?("Posted")
+    date_posted = DateTime.now if posted?
   end
 
   def self.latest

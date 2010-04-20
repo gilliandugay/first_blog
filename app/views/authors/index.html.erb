@@ -1,4 +1,4 @@
-<h2>List of all Authors</h2>
+<h1>Authors</h1>
 <% @authors.each do |author| %>
   <%= author_panel author %>
 <% end %>
@@ -32,4 +32,4 @@
 </table>
 -->
 
-<%= link_to "Create new Author", new_author_path  %>
+<%= link_to "Create new Author", new_author_path, :class => 'new_link' %>

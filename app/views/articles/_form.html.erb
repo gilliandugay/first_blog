@@ -1,6 +1,5 @@
 <% form_for(@article) do |f| %>
   <%= f.error_messages %>
-
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -19,9 +18,16 @@
   </p>
   <p>
     <%= f.label :author %><br />
-    <%= collection_select(:article, :author_id, Author.all, :id, :full_name, :include_blank => true) %>
+    <% unless Author.count.zero? %>
+      <%= collection_select(:article, :author_id, Author.all, :id, :full_name) %>
+    <% else %>
+      <span class="reminder_link">
+        There are no authors yet. 
+        <%= link_to('Create one first.', new_author_path, :target => '_blank') if Author.count.zero? %>
+      </span>
+    <% end %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Update' %>
   </p>
 <% end %>

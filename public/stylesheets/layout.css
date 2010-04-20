@@ -1,0 +1,125 @@
+body {
+	background: #151d30;
+	color: #fff;
+	font: 11pt Arial, sans-serif;
+}
+
+a {	text-decoration: none; }
+a:link { color: #eee; }
+a:visited { color: #ccc; }
+a:hover {
+  color: #fefefe;
+  text-decoration: underline;
+}
+
+#top {
+	height: 220px;
+}
+
+#wrapper {
+	width: 100%;
+	background: url(../images/headerbg.jpg) center top no-repeat;
+	margin: 0;
+}
+
+.content {
+	width: 940px;
+	margin: 0px auto;
+}
+
+#header {
+	padding: 35px 0px;
+	color: #fff;
+	text-shadow: 0 0 10px #222;
+}
+
+h1 {
+	margin: 43px 0 0 0px;
+	padding: 0px 0 0 70px;
+	background: url(../images/logo.png) left top no-repeat;
+	font-size: 60px;
+	font-weight: bold;
+	color: #fff;
+}
+h1 a {
+	position: relative;
+}
+h1 a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+h1 a span {
+	color: #cfe7f1;
+	display: block;
+	text-transform: uppercase;
+	font: 16px Times, serif;
+	position: absolute;
+	left: 30px;
+}
+
+#menu ul {
+	font: 30px Times, serif;
+	list-style: none;
+	color: #fffdbf;
+	text-align: center;
+	margin: 100px 0 0 0;
+}
+#menu ul li {
+	display: inline;
+}
+#menu ul li a {
+	color: #fffdbf;	
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+#menu ul li a:hover {
+	color: #fff;
+	background: url(../images/menuhover.png) repeat;
+	border-radius: 3px;	-moz-border-radius: 3px;	-webkit-border-radius: 3px;	
+}
+
+#container, .sidebar {
+  padding: 10px;
+	background-image: url(../images/fade.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	min-height: 350px;
+}
+
+#container {
+	width: 620px;
+	min-height: 300px;
+	padding-bottom: 50px;
+	background-color: #42526b;
+}
+
+.sidebar {
+	width: 260px;	
+	float: right;
+	background-color:  #85a4c1;
+	min-height: 300px;
+}
+
+#footer {
+	background: url(../images/footerline.jpg) left top repeat-x #0e1424;
+	clear: both;
+  margin-top: 20px;
+  cursor: default;
+  overflow: hidden;
+}
+#footer .content {
+	background: url(../images/footer.jpg) center top no-repeat #0e1424;
+	text-transform: uppercase;
+	font: 0.9em Times, serif;
+	padding-top: 25px;
+	padding-bottom: 75px;
+}
+#footer .content #copyright {
+	float: left;
+	color: #41536a;
+}
+#footer .content #credits {
+	float: right;
+	color: #41536a;
+}

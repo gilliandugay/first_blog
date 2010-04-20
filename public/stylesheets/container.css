@@ -1,0 +1,72 @@
+#container h1 {
+  background: none;
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  font-weight: bold;
+  color: #fffdbf;
+}
+table { width: 620px; }
+td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+  padding: 5px;
+}
+tr {
+  border-top: 1px solid #666;
+}
+tr:first-child { border: none; }
+tr.draft {
+  font-style: italic;
+}
+#article-index th.title { width: 200px; }
+#article-index th.date { width: 120px; }
+#article-index th.author { width: 120px; }
+#article-index td.controls {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+a.control {
+  font-weight: bold;
+  text-decoration: none;
+}
+a.new_link {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blog-entry h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.blog-entry #details {
+  font: 1.25em Times, serif;
+  font-variant: small-caps;
+  display: block;
+}
+.blog-entry p,
+.blog-entry ol,
+.blog-entry ul {
+  font: 1.1em Times, serif;
+  text-align: justify;
+  line-height: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.blog-entry ol,
+.blog-entry ul {
+  text-align: left;
+  list-style-position: inside;
+  margin-left: 1em;
+}
+.blog-entry ol { list-style-type: decimal; }
+.blog-entry ul { list-style-type: square; }
+
+input[type='text'],
+input[type='password'] {
+  font: bold 1.5em Arial, sans-serif;
+}
+textarea { font: 1em Times, serif; }

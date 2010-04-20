@@ -1,19 +1,26 @@
-<div>
-  <h3 class="blog-title">
+<div class="blog-entry">
+  <h2>
     <%= @article.title %>
-  </h3>
-  <h4 class="blog-author">
-    <%= @article.date_posted_f %> by
-    <%= @article.author.full_name %>
-  </h4>
-  <p class="blog-body">
-    <%= @article.body %>
-  </p>
-<%= link_to 'Print', print_article_path(@article) %>
-  <div class="blog-comments">
-    <% @article.comments.each do |comment| %>
-      <%= comment_box comment %>
-    <% end %>
-    <%= render :partial => 'comments/form', :locals => {:comments => @comment, :article => @article} %>
-  </div>
+  </h2>
+  <span id="details">
+    <%= @article.posted? ? "Posted on #{@article.full_date_posted}" : "Draft" %>
+    by <%= @article.author.full_name %>
+    <%= link_to 'Print', print_article_path(@article), :class => 'print' %>
+  </span>
+  <% @article.body.split('\n').each do |paragraph| %>
+    <p>
+      <%= paragraph %>
+    </p>
+  <% end %>
+  <% if @article.posted? %>
+    <div class="comments">
+      <% @article.comments.each do |comment| %>
+        <%= comment_box comment unless comment.new_record? %>
+      <% end %>
+      <%= render :partial => 'comments/form', :locals => {:comments => @comment, :article => @article} %>
+    </div>
+  <% else %>
+    This post is still a draft.
+    Publish
+  <% end %>
 </div>
