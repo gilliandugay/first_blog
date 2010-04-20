@@ -10450,3 +10450,52 @@ Rendered comments/_form (3.3ms)
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted desc LIMIT 1[0m
 Rendered articles/_sidebar (2.9ms)
 Completed in 108ms (View: 42, DB: 8) | 200 OK [http://localhost/articles/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-04-20 12:05:38) [GET]
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted desc LIMIT 1[0m
+  [4;35;1mComment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 3) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 4) [0m
+Rendered comments/_form (3.5ms)
+
+ActionView::TemplateError (undefined method `path_parameters' for #<ActionView::Base:0xb7466c04>) on line #32 of app/views/layouts/application.html.erb:
+29:             <li><%= link_to "authors", authors_path %></li>
+30:             <li><a href="#">about</a></li>
+31:             <li><a href="#">contact us</a></li>
+32:             <li><%= path_parameters()['action'] %></li>
+33:           </ul>
+34:         </div><!-- menu -->
+35:       </div><!--header-->
+
+    app/views/layouts/application.html.erb:32
+
+Rendered rescues/_trace (64.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-04-20 12:06:48) [GET]
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted desc LIMIT 1[0m
+  [4;35;1mComment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 3) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 4) [0m
+Rendered comments/_form (3.3ms)
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (status LIKE 'Posted') ORDER BY date_posted desc LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted desc LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted desc LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted desc LIMIT 1[0m
+Rendered articles/_sidebar (2.3ms)
+Completed in 50ms (View: 26, DB: 4) | 200 OK [http://localhost/]
