@@ -18,7 +18,8 @@ class CommentsController < ApplicationController
 
   def create
     @article = Article.find(params[:article_id])
-    @comment = Comment.new(:article_id => @article.id)
+    @comment = @article.comments.build(params[:comment])
+    @comment.comment_date = DateTime.now
 
     if @comment.save
       flash[:notice] = "Comment was successfuly posted."

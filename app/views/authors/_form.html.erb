@@ -13,7 +13,7 @@
   </p>
   <p>
     <%= f.label :birthday %>
-    <%= f.text_field :birthday %>
+    <%= date_select :author, :birthday, :start_year => 1920, :end_year => Time.now.year - 4, :default => Time.now, :order => [:month, :day, :year] %>
   </p>
 </fieldset>
 <fieldset>

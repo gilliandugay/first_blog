@@ -4,7 +4,7 @@ body {
 	font: 11pt Arial, sans-serif;
 }
 
-a {	text-decoration: none; }
+a {	text-decoration: none; font-weight: bold; }
 a:link { color: #eee; }
 a:visited { color: #ccc; }
 a:hover {
@@ -89,8 +89,7 @@ h1 a span {
 
 #container {
 	width: 620px;
-	min-height: 300px;
-	padding-bottom: 50px;
+	min-height: 350px;
 	background-color: #42526b;
 }
 
@@ -98,7 +97,31 @@ h1 a span {
 	width: 260px;	
 	float: right;
 	background-color:  #85a4c1;
-	min-height: 300px;
+	min-height: 350px;
+}
+
+#login-panel {
+  border-bottom: 1px solid #999;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  font-weight: bold;
+}
+#login-panel a {
+  float: right;
+  text-transform: uppercase;
+}
+.sidebar h3 { font-size: 1.2em; }
+.sidebar #article-list {
+  font: 1.1em Times, serif;
+  line-height: 1.5em;
+  list-style-type: square;
+  list-style-position: inside;
+  margin-left: 1em;
+}
+.sidebar #article-list a {
+  font-weight: normal;
+  color: #fff;
 }
 
 #footer {

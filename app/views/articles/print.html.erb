@@ -1,15 +1,15 @@
-<div id="blog">
-<h3 id="title">
+<div id="blog-post">
+<h1>
   <%= @article.title %>
-</h3>
-<h4 id="author">
-  <%= @article.date_posted_f %> by
+</h1>
+<span id="details">
+  <%= @article.full_date_posted %> by
   <%= @article.author.full_name %>
-</h4>
+</span>
 <div id="body">
   <% @article.body.split("\n").each do |paragraph| %> 
     <p>
-      <%= @article.body %>
+      <%= paragraph %>
     </p>
   <% end %>
 </div>

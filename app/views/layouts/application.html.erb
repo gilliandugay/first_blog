@@ -7,7 +7,7 @@
   "HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 
-  <title>Blog ni Dugs Dugs</title>
+  <title>Sparrows & Sunsets</title>
   <%= stylesheet_link_tag 'reset' %>
   <%= stylesheet_link_tag 'layout' %>
   <%= stylesheet_link_tag 'container' %>
@@ -50,15 +50,16 @@
       </div><!--header-->
 
       <div class="sidebar">
-        <div id="login_panel">
+        <div id="login-panel">
           <% if logged_in? %>
-            <%= current_author.full_name %>
-            <%= link_to "Logout", logout_path %>
+            <span id="login-name">
+              Hello, <%= truncate(current_author.first_name, :length => 30) %>!
+            </span>
+            <%= link_to "Logout", logout_path, :class => "logout" %>
           <% else %>
-            <%= link_to "Login", login_path %>
+            <%= link_to "Login", login_path, :class => "login" %>
           <% end %>
         </div>
-        <h3>Recent Posts</h3>
         <%= render :partial => "articles/sidebar" %>
       </div><!--sidebar-->
 

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :require_author, :except => [:latest, :show]
+  before_filter :require_author, :except => [:latest, :show, :print]
 
   def latest
     @article = Article.latest
@@ -22,7 +22,6 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @comment = @article.comments.build
     render :action => "latest"
   end
 
@@ -53,7 +52,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Author.find(params[:id])
+    @article = Article.find(params[:id])
     @article.destroy
 
     redirect_to articles_url

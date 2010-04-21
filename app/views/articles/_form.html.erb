@@ -1,33 +1,31 @@
-<% form_for(@article) do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= select :article, :status, Article.statuses %>
-  </p>
-  <p>
-    <%= f.label :date_posted %><br />
-    <%= f.datetime_select :date_posted %>
-  </p>
-  <p>
-    <%= f.label :author %><br />
-    <% unless Author.count.zero? %>
-      <%= collection_select(:article, :author_id, Author.all, :id, :full_name) %>
-    <% else %>
-      <span class="reminder_link">
-        There are no authors yet. 
-        <%= link_to('Create one first.', new_author_path, :target => '_blank') if Author.count.zero? %>
-      </span>
-    <% end %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+</p>
+<p>
+  <%= f.label :status %>
+<!--  <%= select :article, :status, Article.statuses %> -->
+  <%= radio_button :article, :status, Article.statuses[0], :checked => "checked" %>
+  Draft
+  <%= radio_button :article, :status, Article.statuses[1] %>
+  Posted
+</p>
+<p>
+  <%= f.label :date_posted %>
+  <%= date_select :article, :date_posted, :default => Time.now, :order => [:month, :day, :year] %>
+</p>
+<p>
+  <%= f.label :author %>
+  <% unless Author.count.zero? %>
+    <%= collection_select(:article, :author_id, Author.all, :id, :full_name) %>
+  <% else %>
+    <span class="reminder_link">
+      There are no authors yet. 
+      <%= link_to('Add new author.', new_author_path, :target => '_blank') %>
+    </span>
+  <% end %>
+</p>

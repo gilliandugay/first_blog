@@ -1,4 +1,5 @@
 <h1>Articles</h1>
+<% unless Article.count.zero? %>
 <table id="article-index">
   <tr>
     <th class="title">Title</th>
@@ -9,18 +10,30 @@
 
 <% @articles.each do |article| %>
   <tr class="<%= article.status.downcase %>">
-    <td><%= article.title %></td>
-    <td><%= article.abbreviated_date_posted %></td>
-    <td><%= article.author.initial_and_last_name %></td>
+    <td>
+      <%= article.title %>
+    </td>
+    <td>
+      <%= article.posted? ? article.abbreviated_date_posted : "(Draft)" %>
+    </td>
+    <td>
+      <% unless article.author.nil? %>
+        <%= link_to article.author.initial_and_last_name, article.author, :class => 'unbold_link' %>
+      <% end %>
+    </td>
     <td class="controls">
-      <%= link_to 'Show', article, :class => 'control' %>
-      <%= link_to 'Edit', edit_article_path(article), :class => 'control' %>
-      <%= link_to 'Delete', article, :confirm => 'Are you sure you want to delete this author?', :method => :delete, :class => 'control' %>
+        <%= link_to 'Show', article, :class => 'control' %>
+      <% if article.author.eql? current_author %>
+        <%= link_to 'Edit', edit_article_path(article), :class => 'control' %>
+        <%= link_to 'Delete', article, :confirm => 'Are you sure you want to delete this article?', :method => :delete, :class => 'control' %>
+      <% end %>
     </td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'Create new article', new_article_path, :class => 'new_link' %>
+<% else %>
+<p class='no-content'>
+  No articles yet.
+</p>
+<% end %>
+<%= link_to 'Create new article', new_article_path, :class => 'create' %>

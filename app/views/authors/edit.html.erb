@@ -1,9 +1,10 @@
-<h2>Edit Author</h2>
+<h1>Edit author</h1>
 <% form_for(@author) do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :locals => {:f => f} %>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit 'Save changes' %>
   </p>
 <% end %>
 
+<%= link_to 'Back', authors_path %>
