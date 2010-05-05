@@ -1,0 +1,42 @@
+module AuthorsHelper
+  def author_panel(author)
+    panel = %Q{
+      <div class='author_panel'>
+        <p>
+          <span class='label'>Name</span>
+          #{author.full_name}
+        </p>
+        <p>
+          <span class='label'>Birthday</span>
+          #{author.full_birthday}
+        </p>
+        <p>
+          <span class='label'>Articles</span>
+    }
+
+    case author.articles.size
+      when 0
+        panel << "No articles yet."
+      when 1
+        panel << author.articles.first
+      else
+        panel << "<ol>"
+        author.articles.each do |article|
+          panel << "<li>#{article.title}</li>"
+        end
+        panel << "</ol>"
+    end
+
+    panel << %Q{
+        </p>
+        <p class='controls'>
+          #{link_to 'Show', author}
+          #{link_to 'Edit', edit_author_path(author)}
+          #{link_to 'Delete', author, :confirm => 'Are you sure you want to delete this author?', :method => :delete}
+        </p>
+      </div>
+    }
+
+    return panel
+  end
+end

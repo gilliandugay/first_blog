@@ -11,5 +11,5 @@ release_info:
   server: http://pip.manila.exist.com
   group_id: gillian_dugay
   type: tar.gz
-  version: 0.0.6
+  version: 0.1.0
   artifact_id: myblog

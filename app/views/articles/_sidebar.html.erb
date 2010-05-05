@@ -1,7 +1,7 @@
 <h3>Recent Posts</h3>
 <ul id="article-list">
   <% Article.recent_posts.each do |article| %>
-    <% unless (not @article.nil?) and (article.eql? @article) %>
+    <% if @article.nil? and (not article.eql? @article) %>
       <li>
         <% short_title = truncate(article.title, :length => 50) %>
         <%= link_to short_title, article %>

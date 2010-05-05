@@ -1,5 +1,5 @@
-releases/*
-log/*.log
-tmp/**/*
-**/*~
-*~
+releases/
+tmp/
+--help/
+-v/
+nbproject/

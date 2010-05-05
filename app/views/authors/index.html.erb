@@ -3,33 +3,4 @@
   <%= author_panel author %>
 <% end %>
 
-<!--
-<table cellspacing="0">
-  <tr>
-    <th style="width: 30%">Last Name</th>
-    <th style="width: 30%">First Name</th>
-    <th style="width: 25%">Birthday</th>
-    <th></th>
-  </tr>
-  <% @authors.each do |author| %>
-  <tr>
-    <td> 
-      <%= author.last_name %>
-    </td>
-    <td>
-      <%= author.first_name %>
-    </td>
-    <td>
-      <%= author.birthday %>
-    </td>
-    <td>
-      <%= link_to "Show", author %>
-      <%= link_to "Edit", edit_author_path(author) %>
-      <%= link_to "Delete", author, :confirm => "Are you sure you want to delete this author?", :method => :delete %>
-    </td>
-  </tr>
-  <% end %>
-</table>
--->
-
 <%= link_to "Create new Author", new_author_path, :class => 'new_link' %>

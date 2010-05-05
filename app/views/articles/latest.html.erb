@@ -3,11 +3,11 @@
     <%= @article.title %>
   </h2>
   <span id="details">
-    <%= @article.posted? ? "Posted on #{@article.full_date_posted}" : "Draft" %>
-    <%= (not @article.author.nil?) ? "by #{@article.author.full_name}" : "" %>
+    <%= @article.posted? ? "Posted on #{format_date @article.date_posted}" : "Draft" %>
+    <%= "by #{format_name @article.author}" unless @article.author.nil? %>
     <%= link_to 'Print', print_article_path(@article), :class => 'print' %>
   </span>
-  <% @article.body.split('\n').each do |paragraph| %>
+  <% @article.body.split("\n").each do |paragraph| %>
     <p>
       <%= paragraph %>
     </p>

@@ -20,7 +20,7 @@
 
 <p class="show_field">
   <em>Author:</em>
-  <%= (not @article.author.nil?) ? "#{@article.author_name} (ID: #{@article.author_id})" : "" %>
+  <%= "#{@article.author_name} (ID: #{@article.author_id})" %>
 </p>
 
 <%= link_to 'Print', print_article_path(@article) %> |

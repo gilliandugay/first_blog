@@ -8,18 +8,16 @@
     <th></th>
   </tr>
 
-<% @articles.each do |article| %>
+  <% @articles.each do |article| %>
   <tr class="<%= article.status.downcase %>">
     <td>
       <%= article.title %>
     </td>
     <td>
-      <%= article.posted? ? article.abbreviated_date_posted : "(Draft)" %>
+      <%= article.posted? ? format_date(article.date_posted, :short_date => true) : "(Draft)" %>
     </td>
     <td>
-      <% unless article.author.nil? %>
-        <%= link_to article.author.initial_and_last_name, article.author, :class => 'unbold_link' %>
-      <% end %>
+      <%= link_to(article.author.initial_and_last_name, article.author, :class => 'unbold_link') unless article.author.nil? %>
     </td>
     <td class="controls">
         <%= link_to 'Show', article, :class => 'control' %>
@@ -29,7 +27,7 @@
       <% end %>
     </td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 <% else %>
 <p class='no-content'>

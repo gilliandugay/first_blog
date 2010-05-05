@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
-  before_filter :require_author, :except => [:latest, :show, :print]
+  before_filter :require_author, :except => [:latest, :index, :show, :print]
 
   def latest
-    @article = Article.latest
+    @article = Article.recent_posts.first
     unless @article.nil?
       @comment = Comment.new(:article_id => @article.id)
     else
@@ -16,7 +16,6 @@ class ArticlesController < ApplicationController
 
   def print
    @article = Article.find(params[:id])
-   @comment = nil
    render :layout => "print"
   end
 

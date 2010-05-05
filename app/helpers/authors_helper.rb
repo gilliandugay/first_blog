@@ -8,33 +8,38 @@ module AuthorsHelper
         </p>
         <p>
           <span class='label'>Birthday</span>
-          #{author.full_birthday}
+          #{(format_date author.birthday) unless author.birthday.nil?}
         </p>
         <p>
-      }
-
-    case author.articles.size
-      when 0
-        panel << "No articles yet."
-      when 1
-        panel << author.articles.first.title
-      else
-        panel << author.articles.collect{ |article| article.title if article.posted? } * ", "
-    end
-
-    panel << %Q{
+          #{display_article_list(author.articles)}
         </p>
         <p class='controls'>
           #{link_to 'Show', author}
       }
     
     panel << %Q{
-          #{link_to 'Edit', edit_author_path(author)}
-          #{link_to 'Delete', author, :confirm => 'Are you sure you want to delete this author?', :method => :delete}
-      } if author.eql? current_author
+          | #{link_to 'Edit', edit_author_path(author)}
+          | #{link_to 'Delete', author,
+            :confirm => 'Are you sure you want to delete this author?',
+            :method => :delete}
+          } if author.eql? current_author
     
     panel << "</p></div>"
 
     return panel
+  end
+
+  private
+  def display_article_list(articles)
+    case articles.size
+      when 0
+        'No articles yet.'
+      when 1
+        %Q{ <span class='label'>Articles</span>
+            #{articles.first.title} }
+      else
+        %Q{ <span class='label'>Articles</span>
+            #{articles.collect{ |article| article.title if article.posted? } * ", " } }
+    end
   end
 end

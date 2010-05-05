@@ -1,0 +1,149 @@
+#container h1 {
+  background: none;
+  margin: 0;
+  padding: 0;
+  font: 2.5em Times, serif;
+  font-variant: small-caps;
+  color: #fffdbf;
+}
+table {
+  width: 620px;
+  margin: 5px 0;
+}
+td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+  padding: 5px;
+}
+tr {
+  border-bottom: 1px solid #666;
+}
+tr.draft {
+  font-style: italic;
+}
+#article-index th.title { width: 200px; }
+#article-index th.date { width: 120px; }
+#article-index th.author { width: 120px; }
+#article-index td.controls {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.blog-entry h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.blog-entry #details {
+  font: 1.25em Times, serif;
+  font-variant: small-caps;
+  display: block;
+}
+.blog-entry p, .blog-entry ol, .blog-entry ul,
+.comment p, .comment ol, .comment ul {
+  font: 1.1em Times, serif;
+  text-align: justify;
+  line-height: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.blog-entry ol, .blog-entry ul,
+.comment ol, .comment ul {
+  text-align: left;
+  list-style-position: inside;
+  margin-left: 1em;
+}
+.blog-entry ol, .comment ol { list-style-type: decimal; }
+.blog-entry ul, .comment ul { list-style-type: square; }
+
+.author-panel {
+  margin: 5px 0;
+  border-bottom: 1px solid #666;
+}
+.author-panel p {
+  display: block;
+  margin: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+.author-panel .label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  width: 100px;
+}
+.author-panel ol {
+  display: block;
+  float: left;
+}
+
+form p { padding: 5px 0; }
+form label {
+  display: block;
+  font-weight: bold;
+}
+
+.no-content {
+  font-weight: bold;
+  margin: 5px 0;
+}
+.no-block {
+  display: inline;
+}
+#errorExplanation {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: yellow;
+}
+#errorExplanation ul {
+  font-weight: normal;
+  font-size: 0.9em;
+  list-style-type: square;
+  list-style-position: inside;
+}
+.fieldWithErrors {
+  font-weight: bold;
+  color: yellow;
+  border-left: 5px solid yellow;
+  padding-left: 5px;'
+  display: inline;
+}
+a.print {
+  float: right;
+  font: bold 10pt Arial, sans-serif;
+  font-variant: normal;
+  text-transform: uppercase;
+}
+.controls a {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.show_field {
+  line-height: 1.25em;
+  font-size: 1.25em;
+  border-bottom: 1px solid #666;
+  margin: 5px 0;
+}
+.show_field em {
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: bold;
+  display: block;
+}
+
+.comments h3 { font-size: 1.25em; }
+.comment {
+  border-top: 1px solid #666;
+  padding: 5px;
+}
+.comment h5 { font-size: 0.9em }
+.comment p, .comment ol, .comment ul {
+  font-size: 1em;
+  line-height: 1em;
+  margin: 5px 0;
+}
+a.unbold_link { font-weight: normal; }

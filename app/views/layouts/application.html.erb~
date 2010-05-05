@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+
+  <title>Blog ni Dugs Dugs</title>
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag 'layout' %>
+  <%= stylesheet_link_tag 'container' %>
+
+  <script type="text/javascript" src="/javascripts/tiny_mce/tiny_mce.js"></script>
+  <script type="text/javascript">
+  <!--
+    tinyMCE.init({
+      mode: "textareas",
+      theme: "simple"
+    });
+  -->
+  </script>
+</head>
+
+<body>
+  <!--
+  <div id="top"></div>
+  <div id="topline"></div>
+  -->
+  
+  <div id="wrapper">
+    <div class="content">
+      <div id="header">
+        <h1>
+          <%= "<a href=\"#{url_for '/'}\">" %>
+          <span>sparrows &</span>sunsets
+          <%= "</a>" %>
+        </h1>
+
+        <div id="menu">
+          <ul>
+            <li class="selected"><%= link_to "home", "/" %></li>
+            <li><%= link_to "articles", articles_path %></li>
+            <li><%= link_to "authors", authors_path %></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact us</a></li>
+          </ul>
+        </div><!-- menu -->
+      </div><!--header-->
+
+      <div class="sidebar">
+        <div id="login-panel">
+          <% if logged_in? %>
+            <span id="login-name">
+              Hello, <%= truncate(current_author.first_name, :length => 30) %>!
+            </span>
+            <%= link_to "Logout", logout_path, :class => "logout" %>
+          <% else %>
+            <%= link_to "Login", login_path, :class => "login" %>
+          <% end %>
+        </div>
+        <%= render :partial => "articles/sidebar" %>
+      </div><!--sidebar-->
+
+      <div id="container">
+        <%= yield %>
+      </div><!--container-->
+    </div><!--content-->
+  </div><!--wrapper-->
+
+  <div id="footer">
+    <div class="content">
+      <p id="copyright">
+        copyright 2010 Gillian Dugay
+      </p>
+      <a id="credits" href="http://vectorart.org">
+        Thanks to VectorArt
+      </a>
+    </div><!--content-->
+  </div><!--footer-->
+</body>
+</html>
+
