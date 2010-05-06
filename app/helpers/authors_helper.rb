@@ -11,7 +11,7 @@ module AuthorsHelper
           #{(format_date author.birthday) unless author.birthday.nil?}
         </p>
         <p>
-          #{display_article_list(author.articles)}
+          #{display_article_list(author.articles.posts)}
         </p>
         <p class='controls'>
           #{link_to 'Show', author}
@@ -39,7 +39,7 @@ module AuthorsHelper
             #{articles.first.title} }
       else
         %Q{ <span class='label'>Articles</span>
-            #{articles.collect{ |article| article.title if article.posted? } * ", " } }
+            #{articles.collect{ |article| article.title } * ", " } }
     end
   end
 end

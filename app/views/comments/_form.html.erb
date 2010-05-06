@@ -3,12 +3,16 @@
   <p>
     <%= f.error_messages %>
   </p>
+  <% unless logged_in? %>
   <p>
     <%= f.label :email %>
     <%= f.text_field :email %>
   </p>
+  <%  else %>
+    <%= f.hidden_field :email, :value => current_author %>
+  <%  end %>
   <p>
-    <%= f.label :body %>
+    <%= f.label 'Comment' %>
     <%= f.text_area :body %>
   </p>
   <p>

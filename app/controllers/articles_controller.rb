@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_filter :require_author, :except => [:latest, :index, :show, :print]
 
   def latest
-    @article = Article.recent_posts.first
+    @article = Article.recent(1).posts.first
     unless @article.nil?
       @comment = Comment.new(:article_id => @article.id)
     else
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
+    @article = Article.new({:author => current_author}.merge(params[:article]))
     if @article.save
       redirect_to @article
     else

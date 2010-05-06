@@ -11,12 +11,11 @@ class Article < ActiveRecord::Base
 
   before_save :set_date_posted
 
-  named_scope :recent_posts, lambda { |limit|
+  named_scope :recent, lambda { |limit|
     limit ||= 10
     
-    { :conditions => {:status => 'Posted'},
-      :order      => 'date_posted DESC',
-      :limit      => limit }
+    { :order => 'date_posted DESC',
+      :limit => limit }
   }
   named_scope :posts, :conditions => {:status => 'Posted'}
   named_scope :drafts, :conditions => {:status => 'Draft'}
