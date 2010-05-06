@@ -34079,3 +34079,450 @@ Rendering authors/index
   [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
 Rendered articles/_sidebar (2.8ms)
 Completed in 80ms (View: 43, DB: 7) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 10:43:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 7)) AND (`articles`.author_id = 7)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) AND (`articles`.author_id = 8)) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) AND ((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 9)) AND (`articles`.author_id = 9)) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.7ms)
+Completed in 63ms (View: 38, DB: 4) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 10:43:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mArticle Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mAuthor Load (1.3ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (5.0ms)
+Completed in 74ms (View: 43, DB: 6) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-05-06 10:43:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"articles"}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (2.9ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (6.5ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (12.4ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.2ms)
+Completed in 76ms (View: 53, DB: 11) | 200 OK [http://localhost/articles/20]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 10:43:56) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (1.4ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (9.4ms)
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 196ms (View: 167, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 10:43:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.1ms)
+Completed in 60ms (View: 44, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-05-06 10:44:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (17.3ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as [:require_author] rendered_or_redirected.
+Completed in 51ms (DB: 18) | 302 Found [http://localhost/articles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 10:44:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (3.7ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (16.4ms)
+Completed in 52ms (View: 20, DB: 6) | 200 OK [http://localhost/sessions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 10:44:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;35;1mAuthor Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (2.1ms)[0m   [0;1mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 7)) AND (`articles`.author_id = 7)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) AND (`articles`.author_id = 8)) [0m
+  [4;36;1mArticle Load (3.3ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) AND ((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 9)) AND (`articles`.author_id = 9)) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.7ms)
+Completed in 235ms (View: 40, DB: 10) | 200 OK [http://localhost/authors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2010-05-06 10:44:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"authors"}
+  [4;35;1mAuthor Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering authors/new
+Rendered authors/_form (19.7ms)
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (16.1ms)
+Completed in 112ms (View: 58, DB: 5) | 200 OK [http://localhost/authors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2010-05-06 10:44:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (1.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 7) [0m
+Rendering template within layouts/application
+Rendering authors/show
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (14.2ms)
+Completed in 59ms (View: 28, DB: 5) | 200 OK [http://localhost/authors/7]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 10:44:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 7)) AND (`articles`.author_id = 7)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) AND (`articles`.author_id = 8)) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) AND ((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) LIMIT 1[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 9)) AND (`articles`.author_id = 9)) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.9ms)
+Completed in 195ms (View: 172, DB: 8) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 10:44:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.4ms)
+Completed in 83ms (View: 49, DB: 7) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 10:44:36) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (2.9ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (9.0ms)
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.3ms)
+Completed in 62ms (View: 34, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 10:44:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (5.3ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 7)) AND (`articles`.author_id = 7)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) AND (`articles`.author_id = 8)) [0m
+  [4;35;1mArticle Load (2.8ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) AND ((`articles`.`status` = 'Posted') AND (`articles`.author_id = 8)) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 9)) AND (`articles`.author_id = 9)) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.4ms)
+Completed in 62ms (View: 36, DB: 11) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2010-05-06 10:44:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.9ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering authors/show
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (16.8ms)
+Completed in 51ms (View: 30, DB: 4) | 200 OK [http://localhost/authors/9]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 10:44:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (5.1ms)
+Completed in 66ms (View: 41, DB: 4) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 10:49:31) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (11.8ms)
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.6ms)
+Completed in 89ms (View: 38, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-05-06 10:49:38) [POST]
+  Parameters: {"comment"=>{"body"=>"<p>hello</p>", "email"=>"hello@hello.com"}, "commit"=>"Post Comment", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "article_id"=>"20", "controller"=>"comments"}
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (10.6ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 20) [0m
+  [4;36;1mComment Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 02:49:38', '<p>hello</p>', '2010-05-06 02:49:38', 20, '2010-05-06 02:49:38', 'hello@hello.com')[0m
+  [4;35;1mSQL (84.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles/20
+Completed in 289ms (DB: 98) | 302 Found [http://localhost/articles/20/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-05-06 10:49:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"articles"}
+  [4;36;1mArticle Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (5.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+  [4;35;1mComment Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendered comments/_form (13.2ms)
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.3ms)
+Completed in 86ms (View: 61, DB: 11) | 200 OK [http://localhost/articles/20]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (448.2ms)[0m   [0;1mDROP DATABASE IF EXISTS `myblog_test`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE DATABASE `myblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (193.2ms)[0m   [0mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `status` text, `author_id` int(11), `created_at` datetime, `updated_at` datetime, `date_posted` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (170.0ms)[0m   [0mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `last_name` varchar(255), `first_name` varchar(255), `remarks` text, `birthday` date, `created_at` datetime, `updated_at` datetime, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (171.8ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `body` text, `comment_date` datetime, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (159.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (334.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (85.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100420054032')[0m
+  [4;36;1mSQL (41.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065757')[0m
+  [4;35;1mSQL (57.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416065851')[0m
+  [4;36;1mSQL (114.9ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065823')[0m
+  [4;35;1mSQL (86.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416080004')[0m
+  [4;35;1mAuthor Load (0.6ms)[0m   [0mSELECT * FROM `authors` ORDER BY authors.id DESC LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` ORDER BY authors.id DESC LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` ORDER BY authors.id DESC LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` ORDER BY authors.id DESC LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` ORDER BY authors.id DESC LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` ORDER BY authors.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mAuthor Load (0.7ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` = BINARY 'dada' AND `authors`.id <> 9) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (267.9ms)[0m   [0;1mDROP DATABASE IF EXISTS `myblog_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `myblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (180.2ms)[0m   [0mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `status` text, `author_id` int(11), `created_at` datetime, `updated_at` datetime, `date_posted` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (155.7ms)[0m   [0mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `last_name` varchar(255), `first_name` varchar(255), `remarks` text, `birthday` date, `created_at` datetime, `updated_at` datetime, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (156.5ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `body` text, `comment_date` datetime, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (158.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (334.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (83.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100420054032')[0m
+  [4;36;1mSQL (87.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065757')[0m
+  [4;35;1mSQL (71.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416065851')[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065823')[0m
+  [4;35;1mSQL (100.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416080004')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (337.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `myblog_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `myblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (176.4ms)[0m   [0mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `status` text, `author_id` int(11), `created_at` datetime, `updated_at` datetime, `date_posted` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (142.8ms)[0m   [0mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `last_name` varchar(255), `first_name` varchar(255), `remarks` text, `birthday` date, `created_at` datetime, `updated_at` datetime, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (143.1ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `body` text, `comment_date` datetime, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (143.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (320.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (68.1ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100420054032')[0m
+  [4;36;1mSQL (72.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065757')[0m
+  [4;35;1mSQL (56.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416065851')[0m
+  [4;36;1mSQL (57.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065823')[0m
+  [4;35;1mSQL (59.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416080004')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (280.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `myblog_test`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE DATABASE `myblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (179.0ms)[0m   [0mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `status` text, `author_id` int(11), `created_at` datetime, `updated_at` datetime, `date_posted` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (155.7ms)[0m   [0mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `last_name` varchar(255), `first_name` varchar(255), `remarks` text, `birthday` date, `created_at` datetime, `updated_at` datetime, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (185.3ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `body` text, `comment_date` datetime, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (172.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (336.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (55.1ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100420054032')[0m
+  [4;36;1mSQL (57.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065757')[0m
+  [4;35;1mSQL (57.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416065851')[0m
+  [4;36;1mSQL (57.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065823')[0m
+  [4;35;1mSQL (57.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416080004')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (286.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `myblog_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `myblog_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (192.8ms)[0m   [0mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `status` text, `author_id` int(11), `created_at` datetime, `updated_at` datetime, `date_posted` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (154.0ms)[0m   [0mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `last_name` varchar(255), `first_name` varchar(255), `remarks` text, `birthday` date, `created_at` datetime, `updated_at` datetime, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (156.9ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `body` text, `comment_date` datetime, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (158.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (334.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (85.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100420054032')[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065757')[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416065851')[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100416065823')[0m
+  [4;35;1mSQL (86.2ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100416080004')[0m

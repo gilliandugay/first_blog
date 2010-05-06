@@ -594,3 +594,537 @@
   [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
   [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'c843d20a785a5ad2815c3d503d0fd900a85f6c172e9115610f9914d5fe6b6d0be2637601846103aced0a14e686101962ae50ec89f2432115e1dcf99b50317087') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.9ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'mB2cpV-c00S5yH3_Lxu9') LIMIT 1[0m
+  [4;35;1mAuthor Load (18.0ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '525538967e87b982d20c51d7bb9ec80b5f770b5833540881bfe0de75fd8dc585acd420ded08236cd7a8d3939f2b49dccb4a62fceda36eca1953ede7b17b19082') LIMIT 1[0m
+  [4;35;1mAuthor Load (1.8ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'j_aGsNnBduuOxMmGPqcI') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '078529e53db3e3bd7b04711e28b0a4251c1a7aa085cbc3cf4c1691e4676833d90c1d101b77c78dd0db06582d87e4bfcbcd4c562ba2a94794b3544057187d0550') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'X2Y1Y_dm135GtbloELXS') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (1.5ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'ab82248bb353607dfad40ce414d4fb698ab6c43cfd90a8cedaca399786ff5a83c8e2404769a1b7e9c21fabc76fa624c25d22fa4a220187b95bdb828705105813') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY '_P6AB7EmIGpQjWcl7cg0') LIMIT 1[0m
+  [4;36;1mAuthor Load (2.5ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.6ms)[0m   [0mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 02:54:55', 'Hello.', '2010-05-06 02:54:55', 1, NULL, '123@yahoo.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (67.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (2.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '397233177965784863b3f90703062959464611fb328fd509f88c172b6ff95c783b027a07de477acb14e206e3fa8b17a8588123cd540487b20ed0d9cb81153f60') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'Ro63ZgbQWdCtF0ZIQK5z') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.6ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'dcc2020386e800ee8435bc492714a0e1c43a7ec013989806c1c13c4d5c0a14de3cde4f8d578d6be040f9426c93852669b14cc6f689bbd7d74d21024de9f79755') LIMIT 1[0m
+  [4;35;1mAuthor Load (1.7ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'U85Ft8mK-6uIQpEDISIr') LIMIT 1[0m
+  [4;36;1mAuthor Load (1.7ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (1.4ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'dcc2020386e800ee8435bc492714a0e1c43a7ec013989806c1c13c4d5c0a14de3cde4f8d578d6be040f9426c93852669b14cc6f689bbd7d74d21024de9f79755') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'U85Ft8mK-6uIQpEDISIr') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '9921a4ece0131edc05e4bda0b00a0e9fc8e896944ce1e48f635aa2330dbab4a15538718c60a73b925fee823143d39de105864a248f70d69e774c1e1c58dbbf15') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY '5_DKf_T38Iy4vfFOIePX') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '77d0cc4a0ce42563612a7bf014f0a4ff1e0b08f7552520fdad47ccd539fdd6307f3e2bda7abdfd2b46e972941d916e6628c478532d75f77851b1308937de20e6') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'MZjKctSyg9eAzWTbbDTB') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '7e8514044ca042d610231ba020c2c0aea4e396838b5f064d14fac83f6f9573fff4b355c00ea42fe2a472b539c63dce02d6385ea139ff6421184f632641845f68') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY '3jVCS4W32PRs7UN8IFgz') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '7e8514044ca042d610231ba020c2c0aea4e396838b5f064d14fac83f6f9573fff4b355c00ea42fe2a472b539c63dce02d6385ea139ff6421184f632641845f68') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY '3jVCS4W32PRs7UN8IFgz') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 02:59:15', 'Hello.', '2010-05-06 02:59:15', 1, NULL, '123@yahoo.com')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (82.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '5a93004a240cfe9844bb0d444daa66ecd6a3f8e4cbc03b4a29e75e85ae8272dffae908f3bf99d9be477e390fbfa780171ce7b51fb46c9aaad3b70c07371ba24a') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'xXO8hn6fQ-FsKE3S6Z60') LIMIT 1[0m
+  [4;35;1mAuthor Load (2.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '0f78d5ad654a1e52d8f6484c7ed35a4eef27a27e8c90ef95790f15db59e6315ca6ce0f7c589ff63ce0844e839c9ca51be85736f4a5a63b0f9982f64561285cee') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'ZM2evhMExrryjBMbNvky') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '0f78d5ad654a1e52d8f6484c7ed35a4eef27a27e8c90ef95790f15db59e6315ca6ce0f7c589ff63ce0844e839c9ca51be85736f4a5a63b0f9982f64561285cee') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'ZM2evhMExrryjBMbNvky') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (1.8ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'bdd94bd3ebd88e8e1a0815c212bd3fa97f85f191bd1aa5ab0780335e355480d4ebe2740a6b646f3b47d5b958f33704fb28a449bcb171c2e8691584fe8a26b363') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY '2pYl_bEV9GObjr7f65QA') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (1.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '80f4b000ffbbd04e9a51e230a8520e9eaf43022ef0866bde7bd571d656b385e83bd206b90cee98a40679eba46c507a55bc4150cdba9ef58eb46742a161a42005') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY '9Qf8FEwjbMxlU-foSrjA') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '1c4dc58c1b429a3ce7adb635519db0ed78bd141272cf1dcd42c92cb45b240cac6650a34a16f2b79f72f43002458e5ec5faf61c1739516ec71679d5cb1b4062c6') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'J4sEVcHZRcppn-myhDXH') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '1c4dc58c1b429a3ce7adb635519db0ed78bd141272cf1dcd42c92cb45b240cac6650a34a16f2b79f72f43002458e5ec5faf61c1739516ec71679d5cb1b4062c6') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'J4sEVcHZRcppn-myhDXH') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 03:02:21', 'Hello.', '2010-05-06 03:02:21', 1, NULL, '123@yahoo.com')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (63.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (2.5ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (2.5ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (1.4ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '47659e5e1239484aafafa27f44a15e6ff493e2d75d9bfcf9056f009862c952e9497f5e4a84e2ccf51b6d25f344a64efc951e2a8228bd00ae452202884c4a5fb5') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'VwhG6edkRsicUMAmQ86T') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (1.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '1b2d1720595f57a862e5aaed852183e93fb62ccb155876b49183ccd31dacaaab0e3debd7fa806596898aa7de93131259356712e47a7f59078ade6e8cdda7cfef') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'nyA5i-aWg1k5CVGvX0Ux') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '1b2d1720595f57a862e5aaed852183e93fb62ccb155876b49183ccd31dacaaab0e3debd7fa806596898aa7de93131259356712e47a7f59078ade6e8cdda7cfef') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'nyA5i-aWg1k5CVGvX0Ux') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY '042f4068b400853d335c91a4aa1f80fd6fc490b9b29fe45c8757358e7dd9f9f4852af156b3537be5f4d08483fa857a7b84ddfc90c50e9377ebe5f4410abf2b21') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'rNdUIOaPM7UugyTnSxJY') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'c1524a6bf82143e0f2baa04c49c424415ba41cc010af063f9fd7c2c2c19ce9970d5d58f3eec5ae7357a44894237a0dbebd4a622cfc3d6b39e0cbfffbf138bf7c') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'GwZXAUKzeSPLWSmLBeac') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.6ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'a95f0bb5ab90400fd18109268c2eee1f9f7adcf841a7b64643d6232a813b7815fe0b12ec3a6a3930cb7a7275804a8061ecc854121a48b9fe4e4db23b608a153a') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'f3Ax5baiHhwB1SXrEVGx') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'a95f0bb5ab90400fd18109268c2eee1f9f7adcf841a7b64643d6232a813b7815fe0b12ec3a6a3930cb7a7275804a8061ecc854121a48b9fe4e4db23b608a153a') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'f3Ax5baiHhwB1SXrEVGx') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mComment Create (1.4ms)[0m   [0;1mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 03:03:56', 'Hello.', '2010-05-06 03:03:56', 1, NULL, '123@yahoo.com')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (55.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.7ms)[0m   [0mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 03:03:56', 'Hello.', '2010-05-06 03:03:56', 1, NULL, '123@yahoo.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (64.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mComment Create (0.8ms)[0m   [0;1mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 03:03:56', 'Hello.', '2010-05-06 03:03:56', 1, NULL, '123@yahoo.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (59.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO `comments` (`created_at`, `body`, `updated_at`, `article_id`, `comment_date`, `email`) VALUES('2010-05-06 03:03:56', 'Hello.', '2010-05-06 03:03:56', 1, NULL, '123@yahoo.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (56.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAuthor Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+
+
+Processing AuthorsController#create (for 0.0.0.0 at 2010-05-06 11:13:56) [POST]
+  Parameters: {"author"=>{}, "action"=>"create", "controller"=>"authors"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'a6f96b9d367f6adf8e0c301b3b7965e7d57ee68742f36d84261ee381d01e63c8fd88d4dbb6f8da301dbedc968c847f6cfe4391f3cd1758ba0b2005f520365d79') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'E-AXBnbXKoNujd5yWcrD') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/application
+Rendering authors/new
+Rendered authors/_form (149.0ms)
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.7ms)
+Completed in 298ms (View: 261, DB: 147) | 200 OK [http://test.host/authors?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 980190962) [0m
+
+
+Processing AuthorsController#destroy (for 0.0.0.0 at 2010-05-06 11:13:56) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"authors"}
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_author] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/authors/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 980190962) [0m
+
+
+Processing AuthorsController#edit (for 0.0.0.0 at 2010-05-06 11:13:56) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"authors"}
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_author] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/authors/980190962/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AuthorsController#index (for 0.0.0.0 at 2010-05-06 11:13:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 298486374)) AND (`articles`.author_id = 298486374)) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (((`articles`.`status` = 'Posted') AND (`articles`.author_id = 980190962)) AND (`articles`.author_id = 980190962)) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.5ms)
+Completed in 22ms (View: 17, DB: 4) | 200 OK [http://test.host/authors]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AuthorsController#new (for 0.0.0.0 at 2010-05-06 11:13:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"authors"}
+Rendering template within layouts/application
+Rendering authors/new
+Rendered authors/_form (46.7ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.8ms)
+Completed in 57ms (View: 56, DB: 1) | 200 OK [http://test.host/authors/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 980190962) [0m
+
+
+Processing AuthorsController#show (for 0.0.0.0 at 2010-05-06 11:13:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"authors"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 980190962) [0m
+Rendering template within layouts/application
+Rendering authors/show
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.9ms)
+Completed in 17ms (View: 16, DB: 1) | 200 OK [http://test.host/authors/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 980190962) [0m
+
+
+Processing AuthorsController#update (for 0.0.0.0 at 2010-05-06 11:13:56) [PUT]
+  Parameters: {"author"=>{}, "action"=>"update", "id"=>"980190962", "controller"=>"authors"}
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_author] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/authors/980190962?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
