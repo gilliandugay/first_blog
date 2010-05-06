@@ -8,7 +8,7 @@ module CommentsHelper
     }
     html << %Q{
         <p>
-          #{link_to 'Delete', article_comment_path(comment), :confirm => 'Are you sure you want to delete this article?'}
+          #{link_to 'Delete', article_comment_path(comment.article, comment), :confirm => 'Are you sure you want to delete this article?'}
         </p>
       </div>
     } if (comment.email.eql? current_author.email) or (comment.article.author.email.eql? current_author.email)

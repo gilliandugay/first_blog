@@ -1,5 +1,7 @@
 <h1>Articles</h1>
-<% unless Article.count.zero? %>
+<% @articles = Article.posts %>
+<% @articles << Article.drafts.by_author(current_author) if logged_in? %>
+<% unless @articles.count.zero? %>
 <table id="article-index">
   <tr>
     <th class="title">Title</th>
@@ -17,13 +19,13 @@
       <%= article.posted? ? format_date(article.date_posted, :short_date => true) : "(Draft)" %>
     </td>
     <td>
-      <%= link_to(article.author.initial_and_last_name, article.author, :class => 'unbold_link') unless article.author.nil? %>
+      <%= link_to(format_name(article.author, :initial_first => true), article.author, :class => 'unbold_link') unless article.author.nil? %>
     </td>
     <td class="controls">
         <%= link_to 'Show', article, :class => 'control' %>
       <% if article.author.eql? current_author %>
-        <%= link_to 'Edit', edit_article_path(article), :class => 'control' %>
-        <%= link_to 'Delete', article, :confirm => 'Are you sure you want to delete this article?', :method => :delete, :class => 'control' %>
+        | <%= link_to 'Edit', edit_article_path(article), :class => 'control' %>
+        | <%= link_to 'Delete', article, :confirm => 'Are you sure you want to delete this article?', :method => :delete, :class => 'control' %>
       <% end %>
     </td>
   </tr>

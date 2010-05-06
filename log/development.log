@@ -31031,3 +31031,1374 @@ Rendered comments/_form (3.7ms)
   [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
 Rendered articles/_sidebar (6.6ms)
 Completed in 99ms (View: 45, DB: 24) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-05 18:35:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;36;1mAuthor Load (1.6ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = '2d26dc2e377aac946408660d0f26dd1de1003ce25792ed5ce199ed94c849628c4bfb8f03d70933f63c3aa04429b45bcc1f292d808b3db12d8138d2e29907aea6') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.5ms)
+Completed in 69ms (View: 39, DB: 9) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-05 18:35:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;35;1mAuthor Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = '2d26dc2e377aac946408660d0f26dd1de1003ce25792ed5ce199ed94c849628c4bfb8f03d70933f63c3aa04429b45bcc1f292d808b3db12d8138d2e29907aea6') LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (7.0ms)
+Completed in 72ms (View: 54, DB: 7) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-05-05 18:35:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = '2d26dc2e377aac946408660d0f26dd1de1003ce25792ed5ce199ed94c849628c4bfb8f03d70933f63c3aa04429b45bcc1f292d808b3db12d8138d2e29907aea6') LIMIT 1[0m
+  [4;35;1mArticle Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendered articles/_form (14.2ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.4ms)
+Completed in 89ms (View: 27, DB: 6) | 200 OK [http://localhost/articles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-05-05 18:37:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (8.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = '2d26dc2e377aac946408660d0f26dd1de1003ce25792ed5ce199ed94c849628c4bfb8f03d70933f63c3aa04429b45bcc1f292d808b3db12d8138d2e29907aea6') LIMIT 1[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` [0m
+
+ActionView::TemplateError (undefined method `format_name' for #<Author:0xb6583f20>) on line #24 of app/views/articles/_form.html.erb:
+21: <p>
+22:   <%= f.label :author %>
+23:   <% unless Author.count.zero? %>
+24:     <%= collection_select(:article, :author_id, Author.all, :id, :full_name) %>
+25:   <% else %>
+26:     <span class="reminder_link">
+27:       There are no authors yet. 
+
+    app/models/author.rb:15:in `full_name'
+    app/views/articles/_form.html.erb:24
+    app/views/articles/new.html.erb:4
+    app/views/articles/new.html.erb:2
+
+Rendered rescues/_trace (244.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-05-05 18:38:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;36;1mAuthor Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = '2d26dc2e377aac946408660d0f26dd1de1003ce25792ed5ce199ed94c849628c4bfb8f03d70933f63c3aa04429b45bcc1f292d808b3db12d8138d2e29907aea6') LIMIT 1[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` [0m
+Rendered articles/_form (13.2ms)
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.3ms)
+Completed in 102ms (View: 24, DB: 8) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#logout (for 127.0.0.1 at 2010-05-05 19:15:40) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = '2d26dc2e377aac946408660d0f26dd1de1003ce25792ed5ce199ed94c849628c4bfb8f03d70933f63c3aa04429b45bcc1f292d808b3db12d8138d2e29907aea6') LIMIT 1[0m
+Redirected to http://localhost:3000/articles
+Completed in 32ms (DB: 2) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-05 19:15:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+
+ActionView::TemplateError (undefined method `initial_and_last_name' for #<ActiveRecord::Associations::BelongsToAssociation:0xb6522874>) on line #20 of app/views/articles/index.html.erb:
+17:       <%= article.posted? ? format_date(article.date_posted, :short_date => true) : "(Draft)" %>
+18:     </td>
+19:     <td>
+20:       <%= link_to(article.author.initial_and_last_name, article.author, :class => 'unbold_link') unless article.author.nil? %>
+21:     </td>
+22:     <td class="controls">
+23:         <%= link_to 'Show', article, :class => 'control' %>
+
+    app/views/articles/index.html.erb:20
+    app/views/articles/index.html.erb:11:in `each'
+    app/views/articles/index.html.erb:11
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (48.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 08:38:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (220.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (23.4ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (39.7ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (57.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (73.7ms)
+Completed in 1150ms (View: 728, DB: 390) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 08:45:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;35;1mAuthor Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (2.3ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.4ms)
+Completed in 51ms (View: 31, DB: 8) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:03:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.0ms)
+Completed in 85ms (View: 54, DB: 5) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-05-06 09:03:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"articles"}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (11.7ms)
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.4ms)
+Completed in 114ms (View: 98, DB: 7) | 200 OK [http://localhost/articles/20]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:03:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.0ms)
+Completed in 49ms (View: 32, DB: 5) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:03:46) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mComment Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (5.4ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.9ms)
+Completed in 73ms (View: 46, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 09:14:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (15.7ms)
+Completed in 81ms (View: 54, DB: 3) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 09:14:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.6ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) LIMIT 1[0m
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.8ms)
+Completed in 106ms (View: 62, DB: 7) | 200 OK [http://localhost/authors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:14:19) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (1.5ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (3.6ms)
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.4ms)
+Completed in 73ms (View: 47, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 09:15:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.4ms)
+Completed in 193ms (View: 31, DB: 4) | 200 OK [http://localhost/authors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:15:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (9.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (5.5ms)
+Completed in 63ms (View: 38, DB: 16) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 09:15:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.2ms)
+Completed in 56ms (View: 31, DB: 3) | 200 OK [http://localhost/authors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 09:15:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (5.8ms)
+Completed in 62ms (View: 37, DB: 3) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2010-05-06 09:16:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering authors/new
+Rendered authors/_form (18.5ms)
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (15.5ms)
+Completed in 242ms (View: 79, DB: 4) | 200 OK [http://localhost/authors/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2010-05-06 09:17:30) [POST]
+  Parameters: {"commit"=>"Save", "author"=>{"birthday(1i)"=>"1991", "remarks"=>"<p>Dada</p>", "birthday(2i)"=>"11", "password_confirmation"=>"[FILTERED]", "birthday(3i)"=>"16", "last_name"=>"Dada", "password"=>"[FILTERED]", "login"=>"dada", "email"=>"dada@dada.dada", "first_name"=>"Dada"}, "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "controller"=>"authors"}
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Load (41.0ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (LOWER(`authors`.`email`) = BINARY 'dada@dada.dada') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (LOWER(`authors`.`login`) = BINARY 'dada') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`persistence_token` = BINARY 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT `authors`.id FROM `authors` WHERE (`authors`.`single_access_token` = BINARY 'ZFVN5e9TeBlSyOdtGTra') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT `authors`.id FROM `authors` WHERE (`authors`.`login` = BINARY 'dada') LIMIT 1[0m
+  [4;36;1mAuthor Create (72.4ms)[0m   [0;1mINSERT INTO `authors` (`remarks`, `created_at`, `single_access_token`, `crypted_password`, `updated_at`, `perishable_token`, `password_salt`, `last_name`, `birthday`, `persistence_token`, `login`, `first_name`, `email`) VALUES('<p>Dada</p>', '2010-05-06 01:17:30', 'ZFVN5e9TeBlSyOdtGTra', 'b8097265b70ff49bb548804487e2c11e1e0a2f382cfb98d3188a2413be7693b93280c37f6c5bc3f51df4a683908d74992641a65dbaa2a3afbdfcab03d03d1a33', '2010-05-06 01:17:30', 'IpXDpFyrjYCmQCqfEl4g', '8OvjjdFpMxpsyKTS9xQp', 'Dada', '1991-11-16', 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb', 'dada', 'Dada', 'dada@dada.dada')[0m
+  [4;35;1mSQL (70.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/authors/9
+Completed in 623ms (DB: 188) | 302 Found [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2010-05-06 09:17:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering authors/show
+  [4;36;1mAuthor Load (1.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (16.8ms)
+Completed in 87ms (View: 63, DB: 4) | 200 OK [http://localhost/authors/9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:17:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Columns (16.6ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;36;1mArticle Load (6.4ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (8.4ms)
+Completed in 89ms (View: 49, DB: 25) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-05-06 09:20:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (41.4ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;35;1mArticle Columns (9.3ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendered articles/_form (15.2ms)
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 379ms (View: 69, DB: 54) | 200 OK [http://localhost/articles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-05-06 09:21:30) [POST]
+  Parameters: {"article"=>{"body"=>"<p>Hello</p>", "title"=>"Hello", "date_posted(1i)"=>"2010", "author_id"=>"9", "date_posted(2i)"=>"5", "date_posted(3i)"=>"6", "status"=>"Draft"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (2.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;35;1mArticle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mArticle Create (1.0ms)[0m   [0;1mINSERT INTO `articles` (`created_at`, `title`, `body`, `updated_at`, `date_posted`, `author_id`, `status`) VALUES('2010-05-06 01:21:30', 'Hello', '<p>Hello</p>', '2010-05-06 01:21:30', '2010-05-06 00:00:00', 9, 'Draft')[0m
+  [4;35;1mSQL (76.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles/21
+Completed in 140ms (DB: 85) | 302 Found [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-05-06 09:21:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"21", "controller"=>"articles"}
+  [4;36;1mArticle Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 21) [0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mAuthor Load (0.8ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.2ms)
+Completed in 76ms (View: 54, DB: 5) | 200 OK [http://localhost/articles/21]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:21:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+
+ActionView::TemplateError (undefined local variable or method `author' for #<ActionView::Base:0xb6523bc0>) on line #12 of app/views/articles/index.html.erb:
+9:   </tr>
+10: 
+11: <% @articles.each do |article| %>
+12:   <% if article.posted? or article.author.eql? current author %>
+13:   <tr class="<%= article.status.downcase %>">
+14:     <td>
+15:       <%= article.title %>
+
+    app/views/articles/index.html.erb:12
+    app/views/articles/index.html.erb:11:in `each'
+    app/views/articles/index.html.erb:11
+
+Rendered rescues/_trace (76.7ms)
+Rendered rescues/_request_and_response (17.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:21:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (3.5ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.9ms)
+Completed in 111ms (View: 61, DB: 10) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#logout (for 127.0.0.1 at 2010-05-06 09:22:03) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (2.4ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`persistence_token` = 'e97c264d35f21841279d34673033ab532607e9c8e0f4a4773e767ffbf8ffe96180aff38d3f507a7b4138a1d3f456671d896ca33c6e8ba098011c3690223171cb') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 51ms (DB: 7) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:22:03) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (3.9ms)
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 69ms (View: 40, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 09:22:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (16.9ms)
+Completed in 66ms (View: 25, DB: 2) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:22:12) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"kabayo"}, "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (6.8ms)[0m   [0;1mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'kabayo') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (12.3ms)
+Completed in 102ms (View: 26, DB: 10) | 200 OK [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:22:20) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"santong"}, "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'santong') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (16.2ms)
+Completed in 238ms (View: 26, DB: 4) | 200 OK [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:22:32) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"santong"}, "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (9.7ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (15.7ms)[0m   [0;1mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'santong') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (36.4ms)
+Completed in 141ms (View: 46, DB: 28) | 200 OK [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:22:37) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"santong"}, "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (12.8ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'santong') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (18.9ms)
+Completed in 137ms (View: 51, DB: 14) | 200 OK [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:22:51) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"santong"}, "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'santong') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAuthor Update (66.1ms)[0m   [0;1mUPDATE `authors` SET `updated_at` = '2010-05-06 01:22:51', `perishable_token` = 'j-_ntfdC8w74PlaohckH' WHERE `id` = 8[0m
+  [4;35;1mSQL (58.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 341ms (DB: 126) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:22:52) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mComment Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (3.9ms)
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.0ms)
+Completed in 70ms (View: 42, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:22:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mArticle Load (2.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.9ms)
+Completed in 83ms (View: 55, DB: 7) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-05-06 09:23:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (1.7ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `authors` [0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendered articles/_form (15.4ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.0ms)
+Completed in 73ms (View: 19, DB: 10) | 200 OK [http://localhost/articles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-05-06 09:23:15) [POST]
+  Parameters: {"article"=>{"body"=>"<p>Na aso</p>", "title"=>"Banal", "date_posted(1i)"=>"2010", "author_id"=>"8", "date_posted(2i)"=>"5", "date_posted(3i)"=>"6", "status"=>"Draft"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Create (0.3ms)[0m   [0;1mINSERT INTO `articles` (`created_at`, `title`, `body`, `updated_at`, `date_posted`, `author_id`, `status`) VALUES('2010-05-06 01:23:15', 'Banal', '<p>Na aso</p>', '2010-05-06 01:23:15', '2010-05-06 00:00:00', 8, 'Draft')[0m
+  [4;35;1mSQL (80.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles/22
+Completed in 287ms (DB: 85) | 302 Found [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-05-06 09:23:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"22", "controller"=>"articles"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 22) [0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.4ms)
+Completed in 96ms (View: 70, DB: 7) | 200 OK [http://localhost/articles/22]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:23:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (3.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.6ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (4.5ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (6.6ms)
+Completed in 101ms (View: 52, DB: 12) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#logout (for 127.0.0.1 at 2010-05-06 09:23:24) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (4.7ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 88ms (DB: 8) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:23:24) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mComment Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (6.3ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.3ms)
+Completed in 83ms (View: 51, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 09:23:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (17.7ms)
+Completed in 58ms (View: 28, DB: 4) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:23:31) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"dada"}, "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (15.1ms)[0m   [0mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'dada') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Update (0.4ms)[0m   [0mUPDATE `authors` SET `updated_at` = '2010-05-06 01:23:32', `perishable_token` = 'C0rOscPCNzYP_e90ffnq' WHERE `id` = 9[0m
+  [4;36;1mSQL (83.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 147ms (DB: 101) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:23:32) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (1.8ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (3.6ms)
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Load (3.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.6ms)
+Completed in 192ms (View: 162, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:23:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 96ms (View: 52, DB: 9) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:29:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mSQL (51.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArticle Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArticle Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+
+NoMethodError (undefined method `lamda' for #<Class:0xb66264b4>):
+  app/models/article.rb:23
+  app/controllers/articles_controller.rb:14:in `index'
+
+Rendered rescues/_trace (162.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:30:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (8.4ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE ((`articles`.`status` = 'Posted' AND `articles`.`author_id` = 9)) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.6ms)
+Completed in 219ms (View: 191, DB: 15) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#logout (for 127.0.0.1 at 2010-05-06 09:30:18) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (6.4ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 74ms (DB: 7) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:30:18) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (6.7ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (3.6ms)
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.9ms)
+Completed in 76ms (View: 45, DB: 13) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 09:30:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;36;1mArticle Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (23.3ms)
+Completed in 95ms (View: 37, DB: 4) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:30:42) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"santong"}, "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (2.0ms)[0m   [0;1mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'santong') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mAuthor Update (9.5ms)[0m   [0;1mUPDATE `authors` SET `updated_at` = '2010-05-06 01:30:42', `perishable_token` = 'XgiTD50eiv6Or8T3PHjK' WHERE `id` = 8[0m
+  [4;35;1mSQL (89.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 173ms (DB: 106) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:30:43) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;35;1mArticle Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mComment Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (11.1ms)
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.3ms)
+Completed in 106ms (View: 64, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:30:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE ((`articles`.`status` = 'Posted' AND `articles`.`author_id` = 8)) [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Posted' AND `articles`.`author_id` = 8)) [0m
+  [4;36;1mAuthor Load (1.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.9ms)
+Completed in 102ms (View: 62, DB: 6) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:33:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (3.7ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 8)) [0m
+  [4;35;1mArticle Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.6ms)
+Completed in 217ms (View: 189, DB: 7) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:34:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mArticle Load (2.2ms)[0m   [0mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 8)) [0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.2ms)
+Completed in 99ms (View: 61, DB: 8) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#logout (for 127.0.0.1 at 2010-05-06 09:34:19) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (5.6ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (1.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '8') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 56ms (DB: 7) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:34:19) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;36;1mArticle Load (36.7ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;35;1mArticle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mComment Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (3.9ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (4.0ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (4.3ms)
+Completed in 224ms (View: 43, DB: 49) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 09:34:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mArticle Load (13.4ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (26.6ms)
+Completed in 90ms (View: 34, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:34:25) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"dada"}, "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (4.2ms)[0m   [0mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'dada') LIMIT 1[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Update (9.6ms)[0m   [0mUPDATE `authors` SET `updated_at` = '2010-05-06 01:34:25', `perishable_token` = 'CtNZqrskOscmpVzib7RO' WHERE `id` = 9[0m
+  [4;36;1mSQL (68.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 173ms (DB: 87) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:34:25) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (4.6ms)
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.3ms)
+Completed in 61ms (View: 38, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:34:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 9)) [0m
+  [4;36;1mArticle Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (0.6ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 66ms (View: 48, DB: 6) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:37:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (4.6ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 9)) [0m
+  [4;35;1mArticle Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mAuthor Load (1.3ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 83ms (View: 49, DB: 9) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 09:37:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (1.6ms)[0m   [0;1mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;35;1mAuthor Load (3.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 9) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.author_id = 9) LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.7ms)
+Completed in 84ms (View: 39, DB: 9) | 200 OK [http://localhost/authors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:37:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 9)) [0m
+  [4;36;1mArticle Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.2ms)
+Completed in 64ms (View: 48, DB: 4) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2010-05-06 09:37:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"authors"}
+  [4;36;1mAuthor Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (8.8ms)[0m   [0mSELECT * FROM `authors` [0m
+Rendering template within layouts/application
+Rendering authors/index
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 7) [0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.author_id = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.author_id = 9) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.author_id = 9) LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.8ms)
+Completed in 105ms (View: 64, DB: 19) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:37:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 9)) [0m
+  [4;35;1mArticle Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mAuthor Load (0.9ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 9) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.0ms)
+Completed in 85ms (View: 56, DB: 6) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2010-05-06 09:37:59) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "id"=>"21", "controller"=>"articles"}
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;35;1mArticle Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 21) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 21) [0m
+  [4;35;1mArticle Destroy (0.3ms)[0m   [0mDELETE FROM `articles` WHERE `id` = 21[0m
+  [4;36;1mSQL (77.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 127ms (DB: 82) | 302 Found [http://localhost/articles/21]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:37:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 9)) [0m
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (3.1ms)
+Completed in 77ms (View: 57, DB: 6) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:38:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;36;1mArticle Load (9.5ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE ((`articles`.`status` = 'Draft' AND `articles`.`author_id` = 9)) [0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (8.2ms)
+Completed in 83ms (View: 61, DB: 13) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-05-06 09:38:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"articles"}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Rendered comments/_form (3.8ms)
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.5ms)
+Completed in 195ms (View: 166, DB: 9) | 200 OK [http://localhost/articles/20]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#logout (for 127.0.0.1 at 2010-05-06 09:39:45) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 38ms (DB: 2) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:39:45) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;35;1mArticle Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mComment Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.4ms)
+Completed in 65ms (View: 42, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:39:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #2 of app/views/articles/index.html.erb:
+1: <h1>Articles</h1>
+2: <% @articles = Article.posts + Article.drafts.by_author(current_author) %>
+3: <% unless @articles.count.zero? %>
+4: <table id="article-index">
+5:   <tr>
+
+    app/models/article.rb:24
+    app/views/articles/index.html.erb:2
+
+Rendered rescues/_trace (237.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:40:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mArticle Load (2.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+
+ActionView::TemplateError (can't convert nil into Array) on line #2 of app/views/articles/index.html.erb:
+1: <h1>Articles</h1>
+2: <% @articles = Article.posts + (Article.drafts.by_author(current_author) if logged_in?) %>
+3: <% unless @articles.count.zero? %>
+4: <table id="article-index">
+5:   <tr>
+
+    app/views/articles/index.html.erb:2
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-05-06 09:41:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mAuthor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') [0m
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (2.1ms)
+Completed in 228ms (View: 45, DB: 7) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 09:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;35;1mAuthor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `authors`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mArticle Load (3.8ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+  [4;35;1mArticle Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendered articles/_sidebar (24.9ms)
+Completed in 64ms (View: 29, DB: 7) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 09:41:22) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"nTp862YE5SRFd+j/bAT+HJm7L/Bw0XlSEWOACVyCTpE=", "author_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"dada"}, "controller"=>"sessions"}
+  [4;36;1mAuthor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM `authors` WHERE (LOWER(`authors`.login) = 'dada') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAuthor Update (10.1ms)[0m   [0mUPDATE `authors` SET `updated_at` = '2010-05-06 01:41:22', `perishable_token` = '8QAExrStdQwoWMUqu35I' WHERE `id` = 9[0m
+  [4;36;1mSQL (60.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 121ms (DB: 72) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#latest (for 127.0.0.1 at 2010-05-06 09:41:22) [GET]
+  Parameters: {"action"=>"latest", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 1[0m
+  [4;36;1mArticle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mComment Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering articles/latest
+  [4;36;1mAuthor Columns (32.4ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = 8) [0m
+  [4;36;1mComment Load (3.7ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM `authors` WHERE (`authors`.`id` = '9') LIMIT 1[0m
+Rendered comments/_form (4.2ms)
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`status` = 'Posted') ORDER BY date_posted DESC LIMIT 10[0m
+Rendered articles/_sidebar (1.5ms)
+Completed in 209ms (View: 150, DB: 42) | 200 OK [http://localhost/]

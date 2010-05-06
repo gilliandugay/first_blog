@@ -18,6 +18,11 @@ class Article < ActiveRecord::Base
       :order      => 'date_posted DESC',
       :limit      => limit }
   }
+  named_scope :posts, :conditions => {:status => 'Posted'}
+  named_scope :drafts, :conditions => {:status => 'Draft'}
+  named_scope :by_author, lambda { |author|
+    { :conditions => {:author_id => author.id} }
+  }
 
   def self.statuses
     STATUSES

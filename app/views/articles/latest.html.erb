@@ -18,7 +18,7 @@
   <% @article.comments.each do |comment| %>
     <%= comment_box comment unless comment.new_record? %>
   <% end %>
-  <%= render :partial => 'comments/form', :locals => {:comments => @comment, :article => @article} %>
+  <%= render(:partial => 'comments/form', :locals => {:comments => @comment, :article => @article}) if logged_in? %>
   </div>
 <% else %>
   This post is still a draft.

@@ -11,15 +11,7 @@ class Author < ActiveRecord::Base
   validates_presence_of   :password_confirmation, :message => 'required'
   validates_uniqueness_of :login, :message => 'already taken. Choose another login name.'
 
-  def initial_and_last_name
-    "#{first_name[0].chr}. #{last_name}"
-  end 
-
   def full_name
     "#{last_name}, #{first_name}"
-  end
-
-  def full_birthday
-    birthday.strftime("%B %d, %Y")
   end
 end
