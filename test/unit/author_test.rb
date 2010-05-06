@@ -1,26 +1,41 @@
 require 'test_helper'
 
 class AuthorTest < ActiveSupport::TestCase
-  def setup
-    @author = Author.create(:first_name => "Juan", :last_name => "Tamad")
-  end
-
   test "should have many articles" do
-    assert_not_nil @author.articles
+    assert_not_nil authors(:full).articles
   end
 
   test "should validate the presence of last_name" do
-    @author.last_name = nil
-    assert_equal false, @author.save
+    authors(:full).last_name = nil
+    authors(:full).save
+    assert_not_nil authors(:full).errors.on(:last_name)
   end
 
   test "should validate the presence of first_name" do
-    @author.first_name = nil
-    assert_equal false, @author.save
+    authors(:full).first_name = nil
+    authors(:full).save
+    assert_not_nil authors(:full).errors.on(:first_name)
   end
 
-  test "should validate the presence of first_name and last_name" do
-    @author = Author.new
-    assert_equal false, @author.save
+  test "should validate the presence of email" do
+    authors(:full).email = nil
+    authors(:full).save
+    assert_not_nil authors(:full).errors.on(:email)
+  end
+
+  test "should validate the presence of login" do
+    authors(:full).login = nil
+    authors(:full).save
+    assert_not_nil authors(:full).errors.on(:login)
+  end
+
+  test "should validate the uniqueness of login" do
+    copy = Author.create(:last_name  => "MyString",
+                         :first_name => "MyString",
+                         :remarks    => "MyText",
+                         :birthday   => DateTime.now,
+                         :email      => "mystring@mystring.com",
+                         :login      => "MyString");
+    assert_not_nil copy.errors.on(:login)
   end
 end

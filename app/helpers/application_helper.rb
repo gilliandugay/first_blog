@@ -8,6 +8,8 @@ module ApplicationHelper
 
     formatted = date.strftime(options[:short_date] ? '%m/%d/%Y' : '%B %d, %Y')
     formatted << date.strftime(', %H:%M:%S') if options[:with_time]
+
+    return formatted
   end
 
   def format_name(author, options={})

@@ -27,16 +27,12 @@ class Article < ActiveRecord::Base
     STATUSES
   end
 
-  def author_name
-    "#{author.last_name}, #{author.first_name}"
-  end
-
   def posted?
     status.eql? "Posted"
   end
 
   private
   def set_date_posted
-    date_posted = DateTime.now if posted?
+    self.date_posted = DateTime.now if posted?
   end
 end

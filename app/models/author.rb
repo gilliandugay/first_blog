@@ -10,8 +10,4 @@ class Author < ActiveRecord::Base
   validates_presence_of   :password, :message => 'required'
   validates_presence_of   :password_confirmation, :message => 'required'
   validates_uniqueness_of :login, :message => 'already taken. Choose another login name.'
-
-  def full_name
-    "#{last_name}, #{first_name}"
-  end
 end

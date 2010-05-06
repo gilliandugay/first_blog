@@ -1,12 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+full:
   last_name: MyString
   first_name: MyString
   remarks: MyText
   birthday: 2010-04-16
+  email: mystring@mystring.com
+  login: MyString
 
-two:
+basic:
   last_name: MyString
   first_name: MyString
   remarks: MyText
