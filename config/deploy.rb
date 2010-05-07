@@ -1,4 +1,5 @@
-et :repository,  "."
+set :application, "myblog"
+set :repository,  "git://github.com/gilliandugay/first_blog.git"
 
 set :scm, :git
 
@@ -12,6 +13,7 @@ set :deploy_to, "/mnt/webapps/#{application}"
 set :use_sudo, false
 
 # Strategy: copy
+#
 # set :deploy_via, :copy
 # set :copy_exclude, [".git"]
 
