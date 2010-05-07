@@ -1,60 +1,45 @@
 require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
-=begin
   def setup
-    @author = Author.create(:first_name => "Juan",
-                            :last_name => "Tamad",
-                            :email => "juantamad@jt.com",
-                            :login => "jtamad")
-    @article = Article.create(:title => "The Decline of Civilization",
-                              :body => "I cannot write.",
-                              :status => "Draft")
-    @author.articles << @article
-
-    Article.create(:title => "Post Post Post",
-                    :body => "This is a post.",
-                    :status => "Posted")
-    @author.articles << Article.last
+    authors(:full).articles << articles(:one)
+    authors(:full).articles << articles(:two)
+    authors(:full).save
   end
 
   test "should have many comments" do
-    assert_not_nil @article.comments
+    assert_not_nil articles(:one).comments
   end
 
   test "should belong to author" do
-    assert(@article.respond_to? :author)
+    assert(articles(:one).respond_to? :author)
   end
 
   test "should validate the presence of title" do
-    @article.title = nil
-    @article.save
-    assert_not_nil @article.errors.on(:title)
+    articles(:one).title = nil
+    articles(:one).save
+    assert_not_nil articles(:one).errors.on(:title)
   end
 
   test "should validate the presence of body" do
-    @article.body = nil
-    @article.save
-    assert_not_nil @article.errors.on(:body)
+    articles(:one).body = nil
+    articles(:one).save
+    assert_not_nil articles(:one).errors.on(:body)
   end
 
   test "should validate inclusion in statuses" do
-    @article.status = 'Unknown'
-    @article.save
-    assert_not_nil @article.errors.on(:status)
+    articles(:one).status = 'Unknown'
+    articles(:one).save
+    assert_not_nil articles(:one).errors.on(:status)
   end
 
   test "should set date posted before save" do
-    @article.status = 'Posted'
-    @article.save
-    assert_not_nil @article.date_posted
+    articles(:one).status = 'Posted'
+    articles(:one).save
+    assert_not_nil articles(:one).date_posted
   end
 
   test "should get recent posts through named scope" do
-    Article.all.each do |article|
-      puts article.inspect
-    end
-    puts "----------------------"
     assert_equal 1, Article.recent(1).count
   end
 
@@ -67,7 +52,10 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test "should get all articles by author through named scope" do
-    assert_equal 2, Article.by_author(@author.id).count
+    assert_equal 2, Article.by_author(authors(:full)).count
   end
-=end
+
+  test "should get all articles by author id through named scope" do
+    assert_equal 2, Article.by_author(authors(:full).id).count
+  end
 end

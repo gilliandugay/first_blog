@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
       redirect_to articles_path
     end
   end
-
+  
   def index
     @articles = Article.all
   end

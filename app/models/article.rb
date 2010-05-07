@@ -11,16 +11,21 @@ class Article < ActiveRecord::Base
 
   before_save :set_date_posted
 
+
   named_scope :recent, lambda { |limit|
-    limit ||= 10
-    
-    { :order => 'date_posted DESC',
+     { :order => 'date_posted DESC',
       :limit => limit }
   }
   named_scope :posts, :conditions => {:status => 'Posted'}
   named_scope :drafts, :conditions => {:status => 'Draft'}
   named_scope :by_author, lambda { |author|
-    { :conditions => {:author_id => author.id} }
+    case author
+    when Author
+      author_id = author.id
+    when Integer, String
+      author_id = author.to_i
+    end
+    { :conditions => {:author_id => author_id} }
   }
 
   def self.statuses

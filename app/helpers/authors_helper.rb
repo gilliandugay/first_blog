@@ -4,14 +4,14 @@ module AuthorsHelper
       <div class='author-panel'>
         <p>
           <span class='label'>Name</span>
-          #{author.full_name}
+          #{format_name author}
         </p>
         <p>
           <span class='label'>Birthday</span>
           #{(format_date author.birthday) unless author.birthday.nil?}
         </p>
         <p>
-          #{display_article_list(author.articles.posts)}
+          #{display_article_list(Article.posts.by_author(author))}
         </p>
         <p class='controls'>
           #{link_to 'Show', author}
