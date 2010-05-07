@@ -36,6 +36,6 @@ end
 
 namespace :utils do
   task :tail_log do
-    run "tail -f #{deploy_to}/current/log/production.log"
+    run "tailf #{deploy_to}/current/log/production.log"
   end
 end
