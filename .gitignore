@@ -3,5 +3,6 @@ tmp/
 --help/
 -v/
 nbproject/
+vendor/rails/
 **/*~
 **/**/*~
