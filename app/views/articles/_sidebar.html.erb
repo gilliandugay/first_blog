@@ -1,5 +1,7 @@
 <% recent_posts = Article.recent(10).posts %>
-<% recent_posts.delete(Article.find(@article.id)) unless @article.nil? %>
+<% unless @article.nil? %>
+  <% recent_posts.delete(@article) %>
+<% end %>
 
 <% unless recent_posts.count.zero? %>
 <h3>Recent Posts</h3>
