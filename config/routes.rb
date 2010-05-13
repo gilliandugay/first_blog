@@ -5,11 +5,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :articles,
                 :collection => {:latest => :get},
                 :member     => {:print  => :get} do |articles|
-    articles.resources :comments
+    articles.resources :comments, :collection => {:hide => :post}
+    articles.resources :ratings, :collection => {:like => :post, :dislike => :post}
   end
 
-  map.login  '/login',  :controller => 'sessions', :action => 'new'
-  map.logout '/logout', :controller => 'sessions', :action => 'logout'
+  map.login   '/login',  :controller => 'sessions', :action => 'new'
+  map.logout  '/logout', :controller => 'sessions', :action => 'logout'
 
   map.root :controller => "articles", :action => "latest"
 

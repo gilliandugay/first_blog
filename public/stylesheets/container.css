@@ -2,7 +2,7 @@
   background: none;
   margin: 0;
   padding: 0;
-  font: 2.5em Times, serif;
+  font: 2.5em Georgia, Times, serif;
   font-variant: small-caps;
   color: #fffdbf;
 }
@@ -37,13 +37,13 @@ tr.draft {
   font-weight: bold;
 }
 .blog-entry #details {
-  font: 1.25em Times, serif;
+  font: 1.25em Georgia, Times, serif;
   font-variant: small-caps;
   display: block;
 }
 .blog-entry p, .blog-entry ol, .blog-entry ul,
 .comment p, .comment ol, .comment ul {
-  font: 1.1em Times, serif;
+  font: 1.1em Georgia, Times, serif;
   text-align: justify;
   line-height: 1.5em;
   margin-top: 1em;
@@ -135,10 +135,17 @@ a.print {
   display: block;
 }
 
-.comments h3 { font-size: 1.25em; }
+#comment-area h3,
+#comment-form h3 { font-size: 1.25em; margin: 0.5em 0; }
+#comment-area h3 span,
+#comment-form h3 span { font-size: 0.5em; font-weight: normal; }
 .comment {
-  border-top: 1px solid #666;
+  border-bottom: 2px groove #42729B;
   padding: 5px;
+}
+.comment:hover {
+  color: #99b;
+  background-color: #42527b;
 }
 .comment h5 { font-size: 0.9em; font-weight: normal; }
 .comment p, .comment ol, .comment ul {
@@ -147,3 +154,8 @@ a.print {
   margin: 5px 0;
 }
 a.unbold_link { font-weight: normal; }
+
+#rating-panel {
+    margin-bottom: 1em;
+    font-style: italic;
+}

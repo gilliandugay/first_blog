@@ -1,0 +1,12 @@
+<div id="comment-area">
+  <h3>
+  <%= link_to_remote "Comments <span>(show/hide)</span>",
+        :complete => visual_effect(:toggle_blind, "comment-list", :duration => 0.5) %>
+  </h3>
+  <div id="comment-list">
+  <% article.comments.each do |comment| %>
+    <%= render :partial => 'comments/box',
+          :locals => {:comment => comment} unless comment.new_record? %>
+  <% end %>
+  </div>
+</div>

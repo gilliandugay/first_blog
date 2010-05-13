@@ -1,4 +1,9 @@
-<% form_for(:comment, :url => article_comments_path(article)) do |f| %>
+<% remote_form_for( :comment,
+     :url => article_comments_path(article),
+     :update => "comment-list",
+     :position => :bottom,
+     :html => {:id => "comment-form"},
+     :complete => visual_effect(:pulsate, "comment-list", :duration => 0.5) ) do |f| %>
   <h3>Join in the discussion!</h3>
   <p>
     <%= f.error_messages %>
@@ -9,13 +14,13 @@
     <%= f.text_field :email %>
   </p>
   <%  else %>
-    <%= f.hidden_field :email, :value => current_author %>
+    <%= f.hidden_field :email, :value => current_author.email  %>
   <%  end %>
   <p>
     <%= f.label 'Comment' %>
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit "Post Comment" %>
+    <%= f.submit "Post Comment", :onmousedown => "saveMCE(); return false;" %>
   </p>
 <% end %>

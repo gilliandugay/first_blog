@@ -1,19 +1,8 @@
 class CommentsController < ApplicationController
-  def index
-  end
-
   def show
     @article = Article.find(params[:article_id])
     @comment = Comment.find(params[:id]) 
     render :template => "articles/latest"
-  end
-
-  def new
-    @comment = Comment.new
-  end
-
-  def edit
-    @command = Comment.find(params[:id])
   end
 
   def create
@@ -23,10 +12,10 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Comment was successfuly posted."
-      redirect_to article_path(@article)
+      render :partial => 'comments/box',
+          :locals => {:comment => @comment} unless @comment.new_record?
     else
       flash[:notice] = "Failed to post comment."
-      render :template => "articles/latest"
     end
   end
 

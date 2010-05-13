@@ -7,22 +7,27 @@
     <%= "by #{format_name @article.author}" unless @article.author.nil? %>
     <%= link_to 'Print', print_article_path(@article), :class => 'print' %>
   </span>
-  <% @article.body.split("\n").each do |paragraph| %>
-    <p>
-      <%= paragraph %>
-    </p>
-  <% end %>
+  <%= @article.body %>
 </div>
+
 <% if @article.posted? %>
-  <div class="comments">
-  <% @article.comments.each do |comment| %>
-    <%= comment_box comment unless comment.new_record? %>
-  <% end %>
-  <%= render :partial => 'comments/form', :locals => {:comments => @comment, :article => @article} %>
+  <div id="rating-panel">
+  <%= render :partial => 'ratings/form',
+        :locals => {:rating => @rating, :article => @article} %>
   </div>
+
+  <%= render :partial => 'comments/block',
+        :locals => {:article => @article} %>
+
+  <%= render :partial => 'comments/form',
+        :locals => {:comments => @comment, :article => @article} %>
 <% else %>
   This post is still a draft.
+  
   <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Delete', @article, :confirm => 'Are you sure you want to delete this article?', :method => :delete %> | 
+  <%= link_to 'Delete', @article,
+        :confirm => 'Are you sure you want to delete this article?',
+        :method => :delete %> |
 <% end %>
+
 <%= link_to 'Back to list of articles', articles_path %>

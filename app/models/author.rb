@@ -1,5 +1,6 @@
 class Author < ActiveRecord::Base
   has_many :articles, :dependent => :destroy
+  has_many :ratings, :through => :articles
 
   acts_as_authentic
   

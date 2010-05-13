@@ -52,13 +52,13 @@ h1 a span {
 	color: #cfe7f1;
 	display: block;
 	text-transform: uppercase;
-	font: 16px Times, serif;
+	font: 16px Georgia, Times, serif;
 	position: absolute;
 	left: 30px;
 }
 
 #menu ul {
-	font: 30px Times, serif;
+	font: 30px Georgia, Times, serif;
 	list-style: none;
 	color: #fffdbf;
 	text-align: center;
@@ -76,7 +76,9 @@ h1 a span {
 #menu ul li a:hover {
 	color: #fff;
 	background: url(../images/menuhover.png) repeat;
-	border-radius: 3px;	-moz-border-radius: 3px;	-webkit-border-radius: 3px;	
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
 }
 
 #container, .sidebar {
@@ -113,7 +115,7 @@ h1 a span {
 }
 .sidebar h3 { font-size: 1.2em; }
 .sidebar #article-list {
-  font: 1.1em Times, serif;
+  font: 1.1em Georgia, Times, serif;
   line-height: 1.5em;
   list-style-type: square;
   list-style-position: inside;
@@ -134,7 +136,7 @@ h1 a span {
 #footer .content {
 	background: url(../images/footer.jpg) center top no-repeat #0e1424;
 	text-transform: uppercase;
-	font: 0.9em Times, serif;
+	font: 0.9em Georgia, Times, serif;
 	padding-top: 25px;
 	padding-bottom: 75px;
 }

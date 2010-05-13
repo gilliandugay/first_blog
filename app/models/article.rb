@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
 
   belongs_to :author
   has_many :comments, :dependent => :destroy
+  has_many :ratings, :dependent => :destroy
 
   validates_presence_of :title, :message => 'required'
   validates_presence_of :body, :message => 'required'

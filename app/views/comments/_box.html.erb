@@ -1,0 +1,16 @@
+<% inside_link = %Q{
+     <div class="comment">
+       <h4>
+         #{comment.email}
+       </h4>
+       <h5>
+         #{format_date comment.comment_date, :short_date => true, :with_time => true}
+       </h5>
+       <div id="comment-#{comment.id}">
+         #{comment.body}
+       </div>
+     </div>
+   } %>
+
+ <%= link_to_remote inside_link,
+       :complete => visual_effect(:toggle_blind, "comment-#{comment.id}", :duration => 0.5) %>

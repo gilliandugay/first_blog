@@ -1,0 +1,6 @@
+<% if logged_in? %>
+  <%= display_rating_panel(article) %>
+<% else %>
+  <% num_likers = article.ratings.positive.count  %>
+  <%= (%Q{#{pluralize(num_likers, "other person")} #{num_likers > 1 ? "like" : "likes"} this.}) unless num_likers.zero? %>
+<% end %>
